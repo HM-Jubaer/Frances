@@ -4,489 +4,600 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Frances Strickland · Performance &amp; Profitability Advisor</title>
-<meta name="description" content="Frances Strickland advises founder-led businesses whose growth has outpaced their systems. Start with the free five-minute Profit Pulse™.">
+<meta name="description" content="Frances Strickland helps founder-led businesses find where profit is leaking. Start with the free five-minute Profit Pulse™.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,300..900;1,62..125,300..900&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,300..800;1,400..600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --paper:#EEEBE3;--paper-2:#E4E0D5;--ink:#161513;--ink-2:#3D3A34;--ink-3:#6E6A61;--rule:#C9C3B6;
-  --signal:#D2401C;--signal-deep:#A93113;--s1:#D9D4C8;--s2:#A9A294;--s3:#5F5B53;
-  --sans:'Archivo',Arial,sans-serif;--serif:'Newsreader',Georgia,serif;
+  --canvas:#E8E9EB;--white:#fff;--soft:#F4F5F6;--ink:#0E1014;--ink-2:#454A52;--ink-3:#7A808A;--line:#E2E4E7;
+  --lime:#D6F36B;--lime-2:#C2E54A;--lime-soft:#F1FBD2;--navy:#0D1A30;--navy-2:#16274A;--blue:#3B6CF6;
+  --font:'Urbanist',system-ui,sans-serif;
+  --r-xl:36px;--r-lg:24px;--r-md:18px;--r-sm:12px;
+  --sh:0 18px 40px rgba(14,16,20,.08);--sh-lg:0 30px 70px rgba(14,16,20,.14);
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:var(--sans);font-size:17px;line-height:1.6;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+body{font-family:var(--font);font-size:17px;line-height:1.6;color:var(--ink);background:var(--canvas);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
-:focus-visible{outline:2px solid var(--signal);outline-offset:3px}
-.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
-@media(max-width:600px){.wrap{padding:0 20px}}
-.c75{font-stretch:75%}
-.btn{display:inline-block;font-weight:700;font-size:16px;padding:16px 24px;border:2px solid var(--ink);transition:background .15s,color .15s,border-color .15s;text-align:center}
-.btn-signal{background:var(--signal);border-color:var(--signal);color:var(--ink)}
-.btn-signal:hover{background:var(--ink);border-color:var(--ink);color:var(--paper)}
-.btn-ink{background:var(--ink);color:var(--paper)}
-.btn-ink:hover{background:var(--paper);color:var(--ink)}
-.btn-line:hover{background:var(--ink);color:var(--paper)}
-.tlink{font-weight:700;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px;text-decoration-color:var(--signal)}
-.tlink:hover{color:var(--signal-deep)}
+:focus-visible{outline:3px solid var(--lime-2);outline-offset:3px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 28px}
+@media(max-width:600px){.wrap{padding:0 18px}}
+h1,h2,h3,h4{font-weight:600;letter-spacing:-.02em;line-height:1.08}
+h2{font-size:clamp(34px,4.2vw,52px)}
+.tag{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--ink-2);background:var(--white);border:1px solid var(--line);padding:6px 14px 6px 8px;border-radius:999px}
+.tag i{width:20px;height:20px;border-radius:50%;background:var(--lime);display:grid;place-items:center;font-style:normal;font-size:11px;font-weight:800}
+.dark .tag{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.14);color:#C9D1E0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:0;font-family:var(--font);font-weight:700;font-size:16px;padding:16px 30px;border-radius:999px;border:0;cursor:pointer;transition:transform .2s,background .2s,color .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-ink{background:var(--ink);color:#fff}.btn-ink:hover{background:#262A31}
+.btn-lime{background:var(--lime);color:var(--ink)}.btn-lime:hover{background:var(--lime-2)}
+.btn-white{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.35)}
+.sec{padding:110px 0}
+@media(max-width:760px){.sec{padding:72px 0}}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:28px;flex-wrap:wrap;margin-bottom:48px}
+.head h2{max-width:640px;margin-top:16px}
+.head p{max-width:420px;color:var(--ink-2)}
+.center{text-align:center;max-width:720px;margin:0 auto 52px}
+.center h2{margin:16px 0 14px}.center p{color:var(--ink-2)}
 
-/* header */
-.top{border-bottom:2px solid var(--ink);background:var(--paper);position:sticky;top:0;z-index:20}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;gap:24px}
-.mark{display:flex;flex-direction:column;line-height:1.05}
-.mark b{font-stretch:75%;font-weight:800;font-size:24px;letter-spacing:-.01em}
-.mark span{font-size:12px;color:var(--ink-3);font-weight:600}
-.top nav{display:flex;gap:28px;font-size:15px;font-weight:600}
-.top nav a:hover{color:var(--signal-deep)}
-.top .btn{padding:11px 18px;font-size:15px}
-.menu-btn{display:none;background:none;border:2px solid var(--ink);font:700 14px var(--sans);padding:9px 12px;cursor:pointer}
-@media(max-width:980px){.top nav{display:none}.menu-btn{display:block}
-  .top nav.open{display:flex;flex-direction:column;position:absolute;left:0;right:0;top:76px;background:var(--paper);border-bottom:2px solid var(--ink);padding:20px 32px;gap:14px}}
-@media(max-width:520px){.top .btn{display:none}}
+/* ============ HERO (Design 1) ============ */
+.stage{position:relative;padding:22px 0 0}
+.stage::before,.stage::after{content:"";position:absolute;width:520px;height:520px;border-radius:90px;background:rgba(255,255,255,.45);transform:rotate(45deg);z-index:0}
+.stage::before{left:-260px;top:-140px}.stage::after{right:-220px;top:380px}
+.frame{position:relative;z-index:1;background:#F6F6F7;border-radius:var(--r-xl);overflow:hidden;box-shadow:0 30px 80px rgba(14,16,20,.06)}
+.frame::before{content:"";position:absolute;right:-6%;top:12%;width:62%;aspect-ratio:1;border-radius:120px;background:#ECEDEF;transform:rotate(45deg);z-index:0}
+nav.main{position:relative;z-index:5;display:flex;align-items:center;justify-content:space-between;padding:26px 48px;gap:20px}
+.logo{display:flex;align-items:center;gap:12px;font-weight:700;font-size:19px;letter-spacing:-.01em}
+.logo svg{flex:none}
+nav.main ul{display:flex;gap:34px;list-style:none;font-size:15px;font-weight:500;color:var(--ink-2)}
+nav.main ul a:hover{color:var(--ink)}
+.dd::after{content:"";display:inline-block;width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translateY(-3px);margin-left:8px}
+.nav-r{display:flex;align-items:center;gap:22px;font-weight:600;font-size:15px}
+.nav-r .btn{padding:13px 26px;font-size:15px}
+.burger{display:none;background:#fff;border:1px solid var(--line);width:44px;height:44px;border-radius:50%;cursor:pointer}
+.burger span{display:block;width:18px;height:2px;background:var(--ink);margin:4px auto}
+@media(max-width:1040px){nav.main ul,.nav-r .txt{display:none}.burger{display:block}
+  nav.main ul.open{display:flex;flex-direction:column;position:absolute;top:84px;left:20px;right:20px;background:#fff;border-radius:20px;padding:20px 24px;gap:14px;box-shadow:var(--sh)}}
+@media(max-width:600px){nav.main{padding:20px}.nav-r .btn{display:none}}
 
-/* hero */
-.hero{padding:56px 0 0}
-.hero-meta{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:13px;font-weight:600;color:var(--ink-3);padding-bottom:20px;border-bottom:1px solid var(--rule)}
-.hero-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:32px;padding:40px 0 56px}
-.hero h1{grid-column:1/9;font-stretch:75%;font-weight:800;font-size:clamp(54px,8.4vw,128px);line-height:.9;letter-spacing:-.025em}
-.hero-copy{grid-column:1/8;display:flex;flex-direction:column;gap:28px}
-.hero-copy p{font-size:20px;color:var(--ink-2);max-width:600px}
-.hero-copy .acts{display:flex;gap:12px;flex-wrap:wrap}
-.spec{grid-column:9/13;grid-row:1/3;align-self:start;background:var(--signal);padding:28px 26px 26px;color:var(--ink)}
-.spec .t{display:flex;justify-content:space-between;align-items:baseline;font-size:13px;font-weight:700;border-bottom:2px solid var(--ink);padding-bottom:10px}
-.spec h2{font-stretch:75%;font-weight:800;font-size:46px;line-height:.95;margin:18px 0 10px;letter-spacing:-.01em}
-.spec p{font-size:15.5px;line-height:1.5}
-.spec table{width:100%;border-collapse:collapse;margin:20px 0 22px;font-size:14.5px}
-.spec td{padding:10px 0;border-top:1px solid rgba(22,21,19,.35);vertical-align:top}
-.spec td:first-child{font-weight:700;width:96px}
-.spec .btn{width:100%;background:var(--ink);color:var(--paper);border-color:var(--ink)}
-.spec .btn:hover{background:var(--paper);color:var(--ink)}
-.spec small{display:block;margin-top:12px;font-size:12.5px;line-height:1.4}
-@media(max-width:980px){.hero h1,.hero-copy,.spec{grid-column:1/-1;grid-row:auto}}
+.hero{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:20px;padding:40px 48px 0;align-items:center}
+@media(max-width:980px){.hero{grid-template-columns:1fr;gap:56px}}
+@media(max-width:600px){.hero{padding:20px 20px 0}}
+.hero h1{font-size:clamp(44px,5.6vw,76px);font-weight:500;letter-spacing:-.035em;line-height:1.04;margin:22px 0 22px}
+.hero h1 .u{position:relative;display:inline-block}
+.hero h1 .u svg{position:absolute;left:-2%;bottom:-6px;width:104%;height:18px}
+.hero .sub{font-size:19px;color:var(--ink-2);max-width:470px}
+.cta-row{position:relative;display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:36px}
+.cta-row .btn-ink{padding:20px 40px}
+.squig{position:absolute;left:300px;top:-46px;width:130px}
+@media(max-width:700px){.squig{display:none}}
+.cta-row .alt{font-weight:600;border-bottom:1.5px solid var(--ink);padding-bottom:2px}
 
-.facts{display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--ink);border-bottom:1px solid var(--rule)}
-.facts div{padding:22px 24px 22px 0}
-.facts div+div{padding-left:24px;border-left:1px solid var(--rule)}
-.facts b{display:block;font-stretch:62%;font-weight:800;font-size:64px;line-height:.9}
-.facts span{font-size:14px;color:var(--ink-2);display:block;margin-top:8px;line-height:1.4}
-@media(max-width:800px){.facts{grid-template-columns:1fr 1fr}.facts div:nth-child(3){padding-left:0;border-left:0}.facts div:nth-child(n+3){border-top:1px solid var(--rule)}}
-.firms{display:flex;flex-wrap:wrap;gap:6px 28px;padding:16px 0;font-size:14px;font-weight:600;color:var(--ink-3)}
-.firms b{color:var(--ink)}
+.trust{grid-column:1/-1;display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center;padding:52px 0 44px;margin-top:20px}
+.trust-l{border-top:1.5px solid var(--ink);padding-top:16px;max-width:300px}
+.trust-l p{font-size:15px;color:var(--ink-2);line-height:1.45}
+.trust-l .arrows{display:flex;gap:10px;margin-top:14px}
+.trust-l .arrows button{width:40px;height:40px;border-radius:50%;border:0;background:#fff;box-shadow:var(--sh);cursor:pointer;font-size:16px}
+.logos{display:flex;gap:28px;flex-wrap:wrap;align-items:center;justify-content:flex-start}
+.logos span{font-weight:800;font-size:18px;letter-spacing:-.02em;color:#2B2F36;display:flex;align-items:center;gap:8px;opacity:.85}
+.logos span::before{content:"";width:16px;height:16px;border:2.5px solid #2B2F36;border-radius:4px;transform:rotate(45deg)}
+@media(max-width:980px){.trust{grid-template-columns:1fr;gap:24px}.logos{gap:22px 30px}.logos span{font-size:17px}}
 
-/* sections */
-.sec{padding:96px 0;border-bottom:1px solid var(--rule)}
-@media(max-width:700px){.sec{padding:64px 0}}
-.sec.heavy{border-bottom:2px solid var(--ink)}
-.split{display:grid;grid-template-columns:3fr 9fr;gap:32px}
-@media(max-width:900px){.split{grid-template-columns:1fr;gap:18px}}
-.lab{font-size:13px;font-weight:600;color:var(--ink-3)}
-.lab b{display:block;font-stretch:75%;font-weight:800;font-size:28px;color:var(--ink);line-height:1;margin-bottom:6px}
-@media(min-width:901px){.lab{position:sticky;top:110px;align-self:start}}
-h2.h{font-stretch:75%;font-weight:800;font-size:clamp(38px,4.6vw,58px);line-height:.98;letter-spacing:-.015em;margin-bottom:18px;max-width:880px}
-.lede{font-size:19px;color:var(--ink-2);max-width:700px;margin-bottom:40px}
+.visual{position:relative;min-height:560px}
+.diamond{position:absolute;left:50%;top:50%;width:76%;aspect-ratio:1;transform:translate(-50%,-50%) rotate(45deg);border-radius:70px;overflow:hidden;background:#D9D6CF;box-shadow:var(--sh-lg)}
+.diamond img{position:absolute;inset:-25%;width:150%;height:150%;max-width:none;object-fit:cover;object-position:50% 30%;transform:rotate(-45deg)}
+@media(max-width:600px){.visual{min-height:420px}.diamond{border-radius:46px}}
+.fc{position:absolute;z-index:3;background:#fff;border-radius:18px;box-shadow:var(--sh);padding:14px 16px;font-size:13.5px;line-height:1.35;animation:float 7s ease-in-out infinite}
+.fc b{font-weight:700;font-size:14.5px}
+@keyframes float{50%{transform:translateY(-10px)}}
+.fc-price{right:4%;top:2%;display:flex;align-items:center;gap:10px;padding:10px;animation-delay:-2s}
+.fc-price .ic{width:44px;height:44px;border-radius:12px;border:1px solid var(--line);display:grid;place-items:center}
+.fc-price .lp{background:var(--lime);border-radius:999px;padding:6px 12px;font-weight:700;font-size:15px}
+.fc-price .lp small{font-weight:500;font-size:11px}
+.fc-now{left:2%;top:14%;display:flex;align-items:center;gap:10px;padding:8px 8px 8px 14px;border-radius:999px;animation-delay:-4s}
+.fc-now .dot{width:8px;height:8px;border-radius:50%;background:#33C26B}
+.fc-now img{width:34px;height:34px;border-radius:50%;object-fit:cover}
+.fc-ring{left:-4%;top:52%;display:flex;align-items:center;gap:12px;animation-delay:-1s}
+.ring{width:58px;height:58px;position:relative}
+.ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.ring span{position:absolute;inset:0;display:grid;place-items:center;font-weight:800;font-size:15px}
+.fc-bars{right:-3%;top:40%;width:230px;animation-delay:-3s}
+.fc-bars .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
+.fc-bars .cols small{display:block;color:var(--ink-3);font-size:11.5px}
+.fc-bars .bar{height:5px;border-radius:9px;background:var(--line);margin-top:6px;overflow:hidden}
+.fc-bars .bar i{display:block;height:100%;border-radius:9px;background:var(--ink)}
+.fc-bars .bar i.l{background:var(--lime-2)}
+.call{position:absolute;z-index:3;left:30%;bottom:-30px;width:96px;height:96px;border-radius:50%;background:#fff;box-shadow:0 0 0 14px rgba(255,255,255,.55),0 0 0 28px rgba(255,255,255,.3),var(--sh);display:grid;place-items:center;transition:transform .2s}
+.call:hover{transform:scale(1.05)}
+.call-lab{position:absolute;left:80px;top:-10px;background:var(--lime);border-radius:999px;padding:6px 14px;font-size:13px;font-weight:700;white-space:nowrap}
+.fc-yrs{right:4%;bottom:20%;display:flex;align-items:center;gap:10px;animation-delay:-5s}
+.fc-yrs b{font-size:30px;line-height:1}
+@media(max-width:600px){.fc-bars{right:0;width:190px;top:auto;bottom:10%}.fc-ring,.fc-now,.fc-yrs{display:none}.call{width:72px;height:72px;left:6%;bottom:-10px}.call-lab{left:62px}.diamond{width:84%}}
 
-/* self-check */
-.check-grid{display:grid;grid-template-columns:1fr 320px;gap:40px;align-items:start}
-@media(max-width:900px){.check-grid{grid-template-columns:1fr}}
-.chk{display:grid;grid-template-columns:34px 1fr;gap:14px;padding:20px 0;border-top:1px solid var(--rule);cursor:pointer;user-select:none}
-.chk:last-of-type{border-bottom:1px solid var(--rule)}
-.chk input{position:absolute;opacity:0;pointer-events:none}
-.chk .box{width:24px;height:24px;border:2px solid var(--ink);margin-top:3px;display:grid;place-items:center;transition:background .15s}
-.chk input:checked+.box{background:var(--ink)}
-.chk input:checked+.box::after{content:"";width:9px;height:9px;background:var(--signal)}
-.chk input:focus-visible+.box{outline:2px solid var(--signal);outline-offset:3px}
-.chk b{font-weight:700;font-size:19px;display:block;line-height:1.3}
-.chk span.d{color:var(--ink-3);font-size:15.5px}
-.tally{border:2px solid var(--ink);padding:24px;position:sticky;top:110px}
-.tally .n{font-stretch:62%;font-weight:800;font-size:96px;line-height:.85}
-.tally .n small{font-size:40px;color:var(--ink-3)}
-.tally p{font-size:15.5px;color:var(--ink-2);margin:14px 0 20px;min-height:72px}
-.tally .btn{width:100%}
-.tally.hot{border-color:var(--signal)}
-.tally.hot .btn{background:var(--signal);border-color:var(--signal);color:var(--ink)}
-.after{margin-top:36px;font-size:20px;max-width:760px}
-.after b{font-weight:700}
+/* ============ RECOGNITION (Brevon cards) ============ */
+.grid6{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:960px){.grid6{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.grid6{grid-template-columns:1fr}}
+.fcard{background:#fff;border-radius:var(--r-lg);padding:30px;transition:box-shadow .25s,transform .25s}
+.fcard:hover{box-shadow:var(--sh);transform:translateY(-4px)}
+.fcard .ico{width:56px;height:56px;border-radius:16px;background:var(--soft);display:grid;place-items:center;margin-bottom:22px}
+.fcard:hover .ico{background:var(--lime)}
+.fcard h3{font-size:22px;margin-bottom:8px}
+.fcard p{color:var(--ink-2);font-size:16px}
+.banner{margin-top:24px;background:var(--ink);color:#fff;border-radius:var(--r-lg);padding:28px 34px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.banner p{font-size:21px;font-weight:500;max-width:680px}
+.banner p b{color:var(--lime);font-weight:600}
 
-/* profit pulse detail */
-.pp{background:var(--ink);color:var(--paper);border-bottom:0}
-.pp .lab{color:#9C978C}.pp .lab b{color:var(--signal)}
-.pp .lede{color:#CFCAC0}
-.reads{display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid var(--paper)}
-.reads div{padding:24px 24px 28px 0}
-.reads div+div{padding-left:24px;border-left:1px solid #3D3A34}
-.reads .i{font-size:13px;font-weight:600;color:#9C978C}
-.reads h3{font-stretch:75%;font-weight:800;font-size:34px;line-height:1;margin:8px 0 10px}
-.reads p{color:#CFCAC0;font-size:15.5px}
-@media(max-width:800px){.reads{grid-template-columns:1fr}.reads div+div{padding-left:0;border-left:0;border-top:1px solid #3D3A34}}
-.outcome{margin-top:56px}
-.outcome h4,.paths h4{font-size:13px;font-weight:600;color:#9C978C;margin-bottom:12px}
-.scale{display:grid;grid-template-columns:repeat(4,1fr)}
-.scale div{padding:16px;min-height:110px;display:flex;flex-direction:column;justify-content:space-between;font-weight:700;font-size:16px;line-height:1.25;color:var(--ink)}
-.scale small{font-weight:400;font-size:12.5px}
-@media(max-width:700px){.scale{grid-template-columns:1fr 1fr}}
-.paths{margin-top:56px}
-.ptable{width:100%;border-collapse:collapse}
-.ptable th{text-align:left;font-size:13px;font-weight:600;color:#9C978C;padding:0 16px 12px 0;border-bottom:2px solid var(--paper)}
-.ptable td{padding:18px 16px 18px 0;border-bottom:1px solid #3D3A34;vertical-align:top;font-size:15.5px;color:#CFCAC0}
-.ptable td:first-child{font-weight:600;color:#9C978C;width:70px}
-.ptable td:nth-child(2){font-weight:700;color:var(--paper);font-size:17px;width:28%}
-.ptable td:last-child{white-space:nowrap;color:var(--paper);font-weight:600}
-@media(max-width:700px){.ptable thead{display:none}.ptable td{display:block;width:auto!important;padding:4px 0;border:0}.ptable tr{display:block;padding:16px 0;border-bottom:1px solid #3D3A34}}
-.promise{margin-top:56px;display:grid;grid-template-columns:1fr auto;gap:32px;align-items:end;border-top:2px solid var(--paper);padding-top:32px}
-.promise blockquote{font-family:var(--serif);font-style:italic;font-size:clamp(24px,2.6vw,32px);line-height:1.3;max-width:760px}
-@media(max-width:800px){.promise{grid-template-columns:1fr}}
+/* ============ ABOUT (Brevon about + Consulter badge) ============ */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:20px;background:#fff;border-radius:var(--r-xl);padding:20px;align-items:stretch}
+@media(max-width:960px){.about{grid-template-columns:1fr}}
+.about .pic{position:relative;border-radius:26px;overflow:hidden;min-height:520px;background:#D9D6CF}
+.about .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+.about .badge{position:absolute;left:24px;bottom:24px;background:var(--lime);border-radius:20px;padding:20px 24px;max-width:200px}
+.about .badge b{font-size:52px;line-height:1;display:block;font-weight:700;letter-spacing:-.03em}
+.about .badge span{font-size:14px;font-weight:600;line-height:1.3;display:block;margin-top:4px}
+.about .loc{position:absolute;right:20px;top:20px;background:rgba(255,255,255,.92);border-radius:999px;padding:8px 14px;font-size:13px;font-weight:700;display:flex;gap:8px;align-items:center}
+.about .txt{padding:36px 30px 20px;display:flex;flex-direction:column}
+.about h2{font-size:clamp(30px,3.2vw,42px);margin:16px 0 18px}
+.about p{color:var(--ink-2);margin-bottom:14px}
+.stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:auto;padding-top:20px}
+@media(max-width:560px){.stats{grid-template-columns:1fr 1fr}}
+.st{border-radius:20px;padding:22px;background:var(--soft)}
+.st.blue{background:var(--navy);color:#fff}
+.st b{font-size:44px;font-weight:700;letter-spacing:-.03em;line-height:1;display:block}
+.st.blue b{color:var(--lime)}
+.st span{font-size:14px;color:var(--ink-2);display:block;margin-top:8px;line-height:1.35}
+.st.blue span{color:#C9D1E0}
 
-/* perspective */
-.persp-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px}
-@media(max-width:900px){.persp-grid{grid-template-columns:1fr;gap:32px}}
-.persp-grid p{color:var(--ink-2);margin-bottom:16px}
-.looks{list-style:none;counter-reset:l}
-.looks li{counter-increment:l;display:grid;grid-template-columns:40px 1fr;padding:14px 0;border-top:1px solid var(--rule);font-size:16px;color:var(--ink-2)}
-.looks li:last-child{border-bottom:1px solid var(--rule)}
-.looks li::before{content:counter(l,decimal-leading-zero);font-weight:600;font-size:13px;color:var(--ink-3);padding-top:3px}
+/* ============ PROFIT PULSE (dark + Consulter steps) ============ */
+.dark{background:var(--navy);color:#fff;border-radius:var(--r-xl);margin:0 16px}
+@media(max-width:600px){.dark{margin:0 8px;border-radius:26px}}
+.dark h2{color:#fff}
+.dark .center p,.dark .head p{color:#B5BFD2}
+.pp-top{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;margin-bottom:64px}
+@media(max-width:960px){.pp-top{grid-template-columns:1fr}}
+.pp-top h2{margin:16px 0 18px}
+.pp-top p{color:#B5BFD2;font-size:18px;max-width:560px}
+.pp-top .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.scanc{background:#fff;color:var(--ink);border-radius:26px;padding:26px;box-shadow:0 40px 80px rgba(0,0,0,.3)}
+.scanc .h{display:flex;justify-content:space-between;align-items:center}
+.scanc .h b{font-size:19px}
+.scanc .h span{font-size:12px;font-weight:700;background:var(--soft);padding:5px 10px;border-radius:999px;color:var(--ink-3)}
+.scanc .rows{margin:20px 0}
+.scanc .r{display:grid;grid-template-columns:110px 1fr;gap:14px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);font-size:15px;font-weight:600}
+.scanc .r:last-child{border:0}
+.scanc .r p{font-weight:400;color:var(--ink-2);font-size:14px;line-height:1.4}
+.levels{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.levels div{border-radius:12px;padding:10px;font-size:12px;font-weight:700;line-height:1.25;min-height:58px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+@media(max-width:960px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.steps{grid-template-columns:1fr}}
+.step{background:var(--navy-2);border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:0 24px 26px;position:relative}
+.step .top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px}
+.step .ic{width:62px;height:62px;border-radius:0 0 18px 18px;background:var(--lime);display:grid;place-items:center}
+.step .n{margin-top:18px;font-size:13px;font-weight:700;color:#8C97AE;background:rgba(255,255,255,.06);padding:5px 12px;border-radius:999px}
+.step h3{font-size:21px;margin-bottom:8px}
+.step p{color:#B5BFD2;font-size:15px}
+.promise{margin-top:40px;display:flex;align-items:center;gap:18px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:20px 24px}
+.promise .ic{flex:none;width:46px;height:46px;border-radius:50%;background:var(--lime);display:grid;place-items:center}
+.promise p{color:#DCE3EF;font-size:16px}
 
-/* engagements */
-.eng{width:100%;border-collapse:collapse}
-.eng caption{text-align:left;font-size:13px;font-weight:600;color:var(--ink-3);padding-bottom:10px}
-.eng th{text-align:left;font-size:13px;font-weight:600;color:var(--ink-3);padding:0 20px 10px 0;border-bottom:2px solid var(--ink)}
-.eng td{padding:22px 20px 22px 0;border-bottom:1px solid var(--rule);vertical-align:top}
-.eng tr.r:hover td{background:var(--paper-2)}
-.eng .name{font-stretch:75%;font-weight:800;font-size:26px;line-height:1.05;width:30%}
-.eng .name small{display:block;font-stretch:100%;font-size:13px;font-weight:600;color:var(--ink-3);margin-top:6px}
-.eng .what{color:var(--ink-2);font-size:15.5px}
-.eng .cost{font-weight:700;white-space:nowrap;width:150px}
-.eng .go{width:140px;text-align:right}
-.eng tr.first .name{color:var(--signal-deep)}
-.eng tr.first td:first-child{box-shadow:inset 4px 0 0 var(--signal);padding-left:16px}
-@media(max-width:800px){.eng thead{display:none}.eng td{display:block;width:auto!important;padding:4px 0;border:0;text-align:left!important}.eng tr{display:block;padding:20px 0;border-bottom:1px solid var(--rule)}.eng tr.first td:first-child{box-shadow:none;padding-left:0}}
-.gap{height:56px}
+/* ============ CTA STRIP (Consulter) ============ */
+.strip{background:var(--lime);border-radius:var(--r-xl);padding:40px 44px;display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center}
+@media(max-width:960px){.strip{grid-template-columns:1fr;padding:32px 26px}}
+.strip h3{font-size:clamp(28px,3vw,38px);letter-spacing:-.03em}
+.strip p{font-weight:500;margin-top:4px}
+.form{display:flex;gap:10px;flex-wrap:wrap}
+.form select,.form input{font-family:var(--font);font-size:15px;font-weight:600;border:0;border-radius:999px;padding:0 22px;height:56px;background:#fff;color:var(--ink);min-width:220px;outline:0}
+@media(max-width:560px){.form select,.form input,.form .btn{width:100%}}
 
-/* about */
-.about-grid{display:grid;grid-template-columns:5fr 7fr;gap:56px;align-items:start}
-@media(max-width:900px){.about-grid{grid-template-columns:1fr}}
-.photo{filter:grayscale(1) contrast(1.08);width:100%;aspect-ratio:4/5;object-fit:cover}
-figcaption{font-size:13px;color:var(--ink-3);border-top:1px solid var(--ink);margin-top:10px;padding-top:8px}
-.about-grid p{color:var(--ink-2);margin-bottom:16px;font-size:17.5px}
-.career{margin-top:28px;border-top:2px solid var(--ink)}
-.career div{display:grid;grid-template-columns:1fr auto;padding:12px 0;border-bottom:1px solid var(--rule);font-size:15.5px}
-.career div span:last-child{color:var(--ink-3);font-size:14px}
+/* ============ PRICING (Brevon) ============ */
+.price{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;align-items:stretch}
+@media(max-width:1060px){.price{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.price{grid-template-columns:1fr}}
+.pc{background:#fff;border-radius:26px;padding:30px 26px;display:flex;flex-direction:column}
+.pc .lab{display:flex;justify-content:space-between;align-items:center;font-size:14px;font-weight:600;color:var(--ink-3)}
+.pc .lab span{background:var(--soft);padding:5px 12px;border-radius:999px;font-size:12px}
+.pc h3{font-size:22px;margin:16px 0 4px;min-height:52px}
+.pc .amt{font-size:46px;font-weight:700;letter-spacing:-.04em;line-height:1;margin:14px 0 6px}
+.pc .amt small{font-size:15px;font-weight:500;color:var(--ink-3);letter-spacing:0}
+.pc ul{list-style:none;margin:20px 0 26px;flex:1;border-top:1px solid var(--line);padding-top:16px}
+.pc li{display:flex;gap:10px;align-items:flex-start;font-size:15px;color:var(--ink-2);padding:6px 0}
+.pc li::before{content:"";flex:none;width:18px;height:18px;margin-top:3px;border-radius:50%;background:var(--lime) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M5 9.5l2.5 2.5L13 6.5' fill='none' stroke='%230E1014' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.pc .btn{width:100%}
+.pc.feat{background:var(--ink);color:#fff}
+.pc.feat .lab{color:#9AA1AC}.pc.feat .lab span{background:var(--lime);color:var(--ink)}
+.pc.feat .amt small{color:#9AA1AC}
+.pc.feat ul{border-color:rgba(255,255,255,.12)}
+.pc.feat li{color:#D3D7DE}
 
-/* voices */
-.voices{background:var(--paper-2)}
-.voice{display:grid;grid-template-columns:1fr 260px;gap:40px;padding:36px 0;border-top:1px solid var(--rule)}
-.voice:first-of-type{border-top:2px solid var(--ink)}
-@media(max-width:800px){.voice{grid-template-columns:1fr;gap:14px}}
-.voice blockquote{font-family:var(--serif);font-style:italic;font-size:clamp(22px,2.3vw,29px);line-height:1.35}
-.voice .who b{display:block;font-weight:700}
-.voice .who span{font-size:14px;color:var(--ink-3);line-height:1.4;display:block;margin-top:4px}
+/* ============ PROGRAMS slider (Brevon) ============ */
+.slider-wrap{position:relative}
+.ctrl{display:flex;gap:10px}
+.ctrl button{width:52px;height:52px;border-radius:50%;border:0;background:#fff;cursor:pointer;font-size:18px;box-shadow:var(--sh);transition:background .2s}
+.ctrl button:hover{background:var(--lime)}
+.track{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 40px)/3);gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:6px}
+.track::-webkit-scrollbar{display:none}
+@media(max-width:960px){.track{grid-auto-columns:80%}}
+.prog{scroll-snap-align:start;background:#fff;border-radius:26px;padding:30px;display:flex;flex-direction:column;min-height:330px}
+.prog .no{font-size:14px;font-weight:700;color:var(--ink-3)}
+.prog h3{font-size:26px;margin:40px 0 12px}
+.prog p{color:var(--ink-2);font-size:15.5px;flex:1}
+.prog .f{display:flex;justify-content:space-between;align-items:center;margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}
+.prog .f span{font-size:13px;font-weight:700;background:var(--soft);padding:6px 12px;border-radius:999px}
+.prog .go{width:44px;height:44px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;transition:background .2s,color .2s}
+.prog:hover .go{background:var(--lime);color:var(--ink)}
 
-/* writing */
-.toc a{display:grid;grid-template-columns:60px 1fr 140px;gap:20px;padding:24px 0;border-top:1px solid var(--rule);align-items:baseline}
-.toc a:last-child{border-bottom:1px solid var(--rule)}
-.toc .i{font-size:13px;font-weight:600;color:var(--ink-3)}
-.toc b{font-stretch:75%;font-weight:800;font-size:28px;line-height:1.05;display:block}
-.toc span.d{color:var(--ink-2);font-size:15.5px;display:block;margin-top:6px}
-.toc .s{font-size:14px;font-weight:600;text-align:right}
-.toc a:hover b{color:var(--signal-deep)}
-@media(max-width:700px){.toc a{grid-template-columns:1fr;gap:4px}.toc .s{text-align:left}}
-.subline{margin-top:28px;display:flex;gap:20px;align-items:center;flex-wrap:wrap;color:var(--ink-2)}
+/* ============ PERSPECTIVE (Nifty split) ============ */
+.persp{display:grid;grid-template-columns:1fr 1fr;border-radius:var(--r-xl);overflow:hidden;background:#fff}
+@media(max-width:960px){.persp{grid-template-columns:1fr}}
+.persp .l{padding:64px 56px}
+@media(max-width:600px){.persp .l,.persp .r{padding:40px 24px}}
+.persp .l h2{font-size:clamp(32px,3.4vw,46px);margin:16px 0 20px}
+.persp .l p{color:var(--ink-2);margin-bottom:14px}
+.persp .r{background:var(--soft);padding:64px 56px}
+.persp .r h3{font-size:22px;margin-bottom:18px}
+.lk{display:flex;gap:14px;align-items:flex-start;padding:13px 0;border-bottom:1px solid var(--line);font-size:16px;color:var(--ink-2);line-height:1.5}
+.lk:last-child{border:0}
+.lk i{flex:none;width:26px;height:26px;border-radius:50%;background:#fff;display:grid;place-items:center;font-style:normal;font-size:12px;font-weight:800;color:var(--ink);margin-top:-1px}
 
-/* faq */
-.faq details{border-top:1px solid var(--rule);padding:22px 0}
-.faq details:last-child{border-bottom:1px solid var(--rule)}
-.faq summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:1fr 24px;gap:20px;font-weight:700;font-size:19px;line-height:1.35}
+/* ============ TESTIMONIALS (Consulter cards) ============ */
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:960px){.tgrid{grid-template-columns:1fr}}
+.tc{background:#fff;border-radius:26px;padding:32px;display:flex;flex-direction:column;position:relative}
+.tc .qm{position:absolute;right:28px;top:22px;font-size:80px;line-height:1;color:var(--soft);font-weight:800}
+.tc .who{display:flex;gap:14px;align-items:center;margin-bottom:22px}
+.tc .av{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:17px;background:var(--lime)}
+.tc:nth-child(2) .av{background:var(--navy);color:#fff}.tc:nth-child(3) .av{background:var(--soft)}
+.tc .who b{display:block;font-size:17px}
+.tc .who span{font-size:13.5px;color:var(--ink-3);line-height:1.35;display:block}
+.tc blockquote{font-size:17px;line-height:1.6;color:var(--ink-2);flex:1}
+
+/* ============ BLOG (Consulter) ============ */
+.blog{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+@media(max-width:1060px){.blog{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.blog{grid-template-columns:1fr}}
+.bp{background:#fff;border-radius:24px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+.bp:hover{transform:translateY(-4px);box-shadow:var(--sh)}
+.bp .cv{height:170px;position:relative;overflow:hidden}
+.bp .cv svg{position:absolute;inset:0;width:100%;height:100%}
+.bp .chip{position:absolute;left:14px;top:14px;background:#fff;border-radius:12px;padding:6px 10px;font-size:12px;font-weight:700;text-align:center;line-height:1.2}
+.bp .in{padding:22px;flex:1;display:flex;flex-direction:column}
+.bp small{font-size:12.5px;font-weight:700;color:var(--ink-3)}
+.bp h3{font-size:19px;line-height:1.25;margin:8px 0}
+.bp p{font-size:15px;color:var(--ink-2);flex:1}
+.bp .more{margin-top:16px;font-weight:700;font-size:14.5px;display:flex;gap:6px;align-items:center}
+
+/* ============ CONSULT (Consulter dark + form) ============ */
+.consult{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:80px 64px}
+@media(max-width:960px){.consult{grid-template-columns:1fr;padding:56px 26px}}
+.consult h2{margin:16px 0 18px}
+.consult .lede{color:#B5BFD2;font-size:18px;max-width:520px}
+.faq{margin-top:28px}
+.faq details{border-bottom:1px solid rgba(255,255,255,.12);padding:18px 0}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;font-weight:600;font-size:17.5px;align-items:center}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"";width:14px;height:14px;margin-top:6px;border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:rotate(45deg);transition:transform .2s}
-.faq details[open] summary::after{transform:rotate(-135deg);margin-top:12px}
-.faq p{margin-top:12px;color:var(--ink-2);max-width:760px}
-.faq p a{font-weight:700;color:var(--signal-deep);text-decoration:underline;text-underline-offset:3px}
+.faq summary::after{content:"+";flex:none;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.08);display:grid;place-items:center;font-size:18px;transition:transform .25s,background .25s}
+.faq details[open] summary::after{transform:rotate(45deg);background:var(--lime);color:var(--ink)}
+.faq p{margin-top:10px;color:#B5BFD2;font-size:15.5px}
+.faq a{color:var(--lime);font-weight:700}
+.book{background:#fff;color:var(--ink);border-radius:28px;padding:32px}
+.book h3{font-size:26px;margin-bottom:6px}
+.book>p{color:var(--ink-2);font-size:15px;margin-bottom:20px}
+.opt{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 18px;border-radius:18px;background:var(--soft);margin-bottom:10px;transition:background .2s}
+.opt:hover{background:var(--lime-soft)}
+.opt b{display:block;font-size:16px}
+.opt small{font-size:13.5px;color:var(--ink-3)}
+.opt i{font-style:normal;width:38px;height:38px;border-radius:50%;background:#fff;display:grid;place-items:center;flex:none}
+.opt.main{background:var(--lime)}
+.opt.main small{color:var(--ink)}
+.opt.main i{background:var(--ink);color:#fff}
 
-/* close */
-.close{background:var(--ink);color:var(--paper);padding:112px 0}
-.close h2{font-stretch:75%;font-weight:800;font-size:clamp(56px,9vw,136px);line-height:.88;letter-spacing:-.025em;max-width:1000px}
-.close p{color:#CFCAC0;font-size:19px;max-width:620px;margin:28px 0 36px}
-.close .acts{display:flex;gap:12px;flex-wrap:wrap}
-.close .btn-line{border-color:var(--paper);color:var(--paper)}
-.close .btn-line:hover{background:var(--paper);color:var(--ink)}
-footer{background:var(--ink);color:#9C978C;font-size:14px;border-top:1px solid #3D3A34}
-footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-top:28px;padding-bottom:28px}
-footer a:hover{color:var(--paper)}
-footer nav{display:flex;gap:22px;flex-wrap:wrap}
+/* ============ NEWSLETTER + FOOTER ============ */
+.news{background:var(--ink);color:#fff;border-radius:999px;padding:22px 22px 22px 40px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.news h3{font-size:24px}
+.news p{color:#9AA1AC;font-size:15px}
+@media(max-width:760px){.news{border-radius:28px;padding:28px}}
+footer{padding:80px 0 30px}
+.fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px}
+@media(max-width:860px){.fgrid{grid-template-columns:1fr 1fr}}
+footer h4{font-size:16px;margin-bottom:14px}
+footer ul{list-style:none}
+footer li{padding:5px 0;color:var(--ink-2);font-size:15.5px}
+footer li a:hover{color:var(--ink);text-decoration:underline}
+footer .about-f{color:var(--ink-2);font-size:15.5px;margin:16px 0 22px;max-width:320px}
+.copy{margin-top:56px;padding-top:22px;border-top:1px solid #D3D5D9;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:14px;color:var(--ink-3)}
+
+sup.tm{font-family:Arial,sans-serif;font-size:.5em;vertical-align:super;line-height:0;margin-left:1px;font-weight:400}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
 </style>
 </head>
 <body>
 
-<header class="top">
+<!-- HERO -->
+<div class="stage">
   <div class="wrap">
-    <a class="mark" href="#"><b>Frances Strickland</b><span>Performance &amp; Profitability Advisor</span></a>
-    <nav id="nav">
-      <a href="#check">Self-check</a>
-      <a href="#profit-pulse">Profit Pulse™</a>
-      <a href="#engagements">Engagements</a>
-      <a href="#about">About</a>
-      <a href="#writing">Writing</a>
-      <a href="#questions">Questions</a>
-    </nav>
-    <div style="display:flex;gap:10px">
-      <a class="btn btn-signal" href="https://verolead-profitpulse.netlify.app/">Profit Pulse™</a>
-      <button class="menu-btn" onclick="document.getElementById('nav').classList.toggle('open')" aria-label="Open menu">Menu</button>
-    </div>
-  </div>
-</header>
-
-<main>
-<section class="hero">
-  <div class="wrap">
-    <div class="hero-meta"><span>Advisory for founder-led businesses whose growth has outpaced their systems</span><span>Crissier, Switzerland</span></div>
-    <div class="hero-grid">
-      <h1>Revenue is there. The profit is somewhere else.</h1>
-      <div class="hero-copy">
-        <p>When a business gets harder to run, the system is telling you something. Frances Strickland finds where the structure is working against you, and builds the conditions for performance that holds.</p>
-        <div class="acts">
-          <a class="btn btn-ink" href="https://verolead-profitpulse.netlify.app/">Find the leak in five minutes</a>
-          <a class="btn btn-line" href="https://calendly.com/timewithfran/strategic-conversation">Book a conversation</a>
+    <div class="frame">
+      <nav class="main">
+        <a class="logo" href="#"><svg width="34" height="34" viewBox="0 0 34 34"><rect x="4" y="4" width="26" height="26" rx="7" transform="rotate(45 17 17)" fill="#0E1014"/><path d="M9 17h5l2-5 3 10 2-5h4" fill="none" stroke="#D6F36B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Frances Strickland</a>
+        <ul id="menu">
+          <li><a href="#recognise">How I help</a></li>
+          <li><a class="dd" href="#programs">Offerings</a></li>
+          <li><a href="#profit-pulse">Profit Pulse<sup class="tm">™</sup></a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#insights">Insights</a></li>
+        </ul>
+        <div class="nav-r">
+          <a class="txt" href="https://calendly.com/timewithfran/strategic-conversation">Book a call</a>
+          <a class="btn btn-ink" href="https://verolead-profitpulse.netlify.app/">Free Profit Pulse<sup class="tm">™</sup></a>
+          <button class="burger" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('open')"><span></span><span></span><span></span></button>
         </div>
-      </div>
-      <aside class="spec" aria-label="Profit Pulse summary">
-        <div class="t"><span>Start here</span><span>No. 01</span></div>
-        <h2>Profit Pulse™</h2>
-        <p>A five-minute risk scan for owners who know something is off but cannot say exactly what.</p>
-        <table>
-          <tr><td>Reads</td><td>Structure, Leadership, Flow</td></tr>
-          <tr><td>Returns</td><td>Your risk profile and one immediate focus area, by email</td></tr>
-          <tr><td>Takes</td><td>Five minutes</td></tr>
-          <tr><td>Costs</td><td>Nothing. No card.</td></tr>
-        </table>
-        <a class="btn" href="https://verolead-profitpulse.netlify.app/">Begin the Profit Pulse™</a>
-        <small>If you keep your results private, Frances will not contact you.</small>
-      </aside>
-    </div>
-    <div class="facts">
-      <div><b>30+</b><span>years running businesses from the inside</span></div>
-      <div><b>3</b><span>continents of direct operating experience</span></div>
-      <div><b>6</b><span>global companies across several industries</span></div>
-      <div><b>750</b><span>USD, CAD or €: a Performance Clarity Session, fixed price</span></div>
-    </div>
-    <div class="firms"><span>Previously inside:</span><b>SC Johnson</b><b>Bosch</b><b>Cummins</b><b>Eaton</b><b>Union Carbide</b><b>Square D</b></div>
-  </div>
-</section>
+      </nav>
 
-<section class="sec" id="check">
-  <div class="wrap split">
-    <div class="lab"><b>01</b>Self-check</div>
-    <div>
-      <h2 class="h">Which of these is true of your business right now?</h2>
-      <p class="lede">These usually get read as people problems. Tick the ones that apply.</p>
-      <div class="check-grid">
-        <div id="checks">
-          <label class="chk"><input type="checkbox"><span class="box"></span><span><b>Revenue is there. The profit is somewhere else.</b><span class="d">The top line grows. The margin does not follow.</span></span></label>
-          <label class="chk"><input type="checkbox"><span class="box"></span><span><b>The business has become heavier to run.</b><span class="d">What used to feel like momentum now feels like management.</span></span></label>
-          <label class="chk"><input type="checkbox"><span class="box"></span><span><b>Too much still depends on the founder.</b><span class="d">Nothing moves without constant help.</span></span></label>
-          <label class="chk"><input type="checkbox"><span class="box"></span><span><b>The customer experience is slipping.</b><span class="d">Somewhere between the decision and the delivery, something gets lost.</span></span></label>
-          <label class="chk"><input type="checkbox"><span class="box"></span><span><b>Growth exposed gaps that were hidden at a smaller size.</b><span class="d">The model that worked then does not travel well.</span></span></label>
-          <label class="chk"><input type="checkbox"><span class="box"></span><span><b>Leadership is working harder than the results justify.</b><span class="d">The effort is real. The output is uneven.</span></span></label>
-        </div>
-        <div class="tally" id="tally">
-          <div class="n"><span id="count">0</span><small> / 6</small></div>
-          <p id="tallyText">Tick what applies. There is no score here, only a starting point.</p>
-          <a class="btn btn-line" href="https://verolead-profitpulse.netlify.app/">Run the Profit Pulse™</a>
-        </div>
-      </div>
-      <p class="after">More often than not, these are signs of a business that has <b>outgrown its systems</b>. The Profit Pulse™ shows which one is costing you most.</p>
-    </div>
-  </div>
-</section>
-
-<section class="sec pp" id="profit-pulse">
-  <div class="wrap split">
-    <div class="lab"><b>02</b>Profit Pulse™</div>
-    <div>
-      <h2 class="h">A focused diagnostic. You decide what happens after.</h2>
-      <p class="lede">It examines the three operating conditions that decide whether your profitability is predictable, or depends on you stepping in constantly. It is built for every stage: 1 to 15 people, 15 to 50, and 50 and above.</p>
-      <div class="reads">
-        <div><span class="i">Condition 1</span><h3>Structure</h3><p>How ownership, priorities and decisions are set, and whether the foundation scales.</p></div>
-        <div><span class="i">Condition 2</span><h3>Leadership</h3><p>Where accountability or clarity is stretched.</p></div>
-        <div><span class="i">Condition 3</span><h3>Flow</h3><p>Where work stalls or repeats, and whether financial signals arrive in time to act.</p></div>
-      </div>
-      <div class="outcome">
-        <h4>You receive one of four profiles</h4>
-        <div class="scale">
-          <div style="background:var(--s1)">Strong Position<small>Level 1</small></div>
-          <div style="background:var(--s2)">Hidden Risk Signals Present<small>Level 2</small></div>
-          <div style="background:var(--s3);color:var(--paper)">Elevated Risk<small>Level 3</small></div>
-          <div style="background:var(--signal)">Critical Attention Required<small>Level 4</small></div>
-        </div>
-      </div>
-      <div class="paths">
-        <h4>Then you choose one of four paths</h4>
-        <table class="ptable">
-          <thead><tr><th>Path</th><th>What it is</th><th>What happens</th><th>Cost</th></tr></thead>
-          <tbody>
-            <tr><td>01</td><td>Review independently</td><td>You act on the results yourself. No contact from Frances.</td><td>None</td></tr>
-            <tr><td>02</td><td>A second set of eyes</td><td>Frances reviews your responses and reaches out only if something material appears.</td><td>None</td></tr>
-            <tr><td>03</td><td>Profit Pulse Advisory</td><td>Thirty minutes examining one finding together.</td><td>No cash</td></tr>
-            <tr><td>04</td><td>Performance Clarity Session</td><td>Find the mechanism underneath the finding and leave with an action plan.</td><td>USD/CAD/€ 750</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="promise">
-        <blockquote>Keep your results private, and Frances will not contact you. No follow-up emails or messages unless you invite it.</blockquote>
-        <a class="btn btn-signal" href="https://verolead-profitpulse.netlify.app/">Begin the Profit Pulse™</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="perspective">
-  <div class="wrap split">
-    <div class="lab"><b>03</b>Perspective</div>
-    <div>
-      <h2 class="h">Most businesses are not broken. They are compensating.</h2>
-      <div class="persp-grid">
+      <div class="hero">
         <div>
-          <p>Most problems in a growing business are not failures of effort or intent. They are the visible signs of systems built for an earlier version of the business, now asked to do more than they were built for.</p>
-          <p>Frances works where strategy, execution and financial performance meet. She starts with how decisions actually move, where accountability lives in practice rather than on the org chart, and what the business has stopped telling its leaders.</p>
-          <p>What comes out is clarity, sequenced action, and a foundation for performance that holds.</p>
+          <span class="tag"><i>✓</i>Strategic Performance &amp; Profitability Advisor</span>
+          <h1>Revenue is there. Let's find where the <span class="u">profit<svg viewBox="0 0 200 18" preserveAspectRatio="none"><path d="M3 12C40 4 90 3 120 8s50 6 77-2" fill="none" stroke="#C2E54A" stroke-width="5" stroke-linecap="round"/></svg></span> went.</h1>
+          <p class="sub">Frances Strickland helps founder-led businesses whose growth has outpaced their systems. You get clarity, sequenced action and performance that holds.</p>
+          <div class="cta-row">
+            <svg class="squig" viewBox="0 0 130 60" fill="none" aria-hidden="true"><path d="M4 50c16-4 30-14 30-26 0-9-10-12-14-4-5 10 8 18 22 16 22-3 40-18 80-26" stroke="#0E1014" stroke-width="1.6" stroke-linecap="round"/><path d="M114 4l9 6-9 6" stroke="#0E1014" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <a class="btn btn-ink" href="https://verolead-profitpulse.netlify.app/">Start the free Profit Pulse<sup class="tm">™</sup></a>
+            <a class="alt" href="https://calendly.com/timewithfran/strategic-conversation">Book a conversation</a>
+          </div>
         </div>
-        <ol class="looks">
-          <li>Where growth exposed strain that was always there</li>
-          <li>Where execution became uneven despite good people</li>
-          <li>Where profit slipped without an obvious cause in the numbers</li>
-          <li>Where a worsening customer experience is an operating signal</li>
-          <li>Where dependence on the founder became a ceiling</li>
-          <li>Where a new market showed the operating model does not travel</li>
-          <li>Where pressure on leaders became normal and stopped being treated as information</li>
-        </ol>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section class="sec heavy" id="engagements">
-  <div class="wrap split">
-    <div class="lab"><b>04</b>Engagements</div>
-    <div>
-      <h2 class="h">Start where it sounds like you.</h2>
-      <p class="lede">The right starting point depends on where you are, not on the size of the business. Most established businesses begin with the Profit Pulse™.</p>
-      <table class="eng">
-        <caption>For established businesses, in order</caption>
-        <thead><tr><th>Engagement</th><th>What it is</th><th>Investment</th><th></th></tr></thead>
-        <tbody>
-          <tr class="r first"><td class="name">Profit Pulse™<small>Five-minute scan</small></td><td class="what">Shows where profit is leaking, what drives the gap between effort and results, and what to fix first.</td><td class="cost">Free</td><td class="go"><a class="tlink" href="https://verolead-profitpulse.netlify.app/">Begin</a></td></tr>
-          <tr class="r"><td class="name">Profit Pulse Advisory<small>30 minutes</small></td><td class="what">One finding from your scan, examined with Frances.</td><td class="cost">No cash</td><td class="go"><span style="font-size:14px;color:var(--ink-3)">After the scan</span></td></tr>
-          <tr class="r"><td class="name">Performance Clarity Session<small>One working session</small></td><td class="what">Built around one question: what would you do if this were your business? You leave knowing what is creating the problem, with a practical plan.</td><td class="cost">USD/CAD/€ 750</td><td class="go"><a class="tlink" href="https://calendly.com/timewithfran/performance_clarity">Schedule</a></td></tr>
-          <tr class="r"><td class="name">Predictable Performance &amp; Profitability<small>Ongoing</small></td><td class="what">For businesses where execution is uneven, leaders are under steady pressure, and profit does not match the effort going in.</td><td class="cost">By engagement</td><td class="go"><a class="tlink" href="https://performance-and-profitability.netlify.app/">Details</a></td></tr>
-        </tbody>
-      </table>
-      <div class="gap"></div>
-      <table class="eng">
-        <caption>Other starting points</caption>
-        <thead><tr><th>Engagement</th><th>For</th><th>Format</th><th></th></tr></thead>
-        <tbody>
-          <tr class="r"><td class="name">Momentum<small>If you are building independently</small></td><td class="what">Consultants, coaches, service providers and small business owners who know what they do but have lost clarity on what to focus on.</td><td class="cost">One conversation</td><td class="go"><a class="tlink" href="https://calendly.com/timewithfran/momentum">Book</a></td></tr>
-          <tr class="r"><td class="name">Cross-Border Readiness<small>If you are expanding</small></td><td class="what">Shows where your operating model will break in a new market, before you make the move.</td><td class="cost">Assessment</td><td class="go"><a class="tlink" href="https://cross-border-readiness.netlify.app/">Details</a></td></tr>
-          <tr class="r"><td class="name">Leader of Leaders Accelerator<small>If you just stepped up</small></td><td class="what">For new senior leaders, leadership transitions and post-acquisition integration. Uses the MindTime thinking assessment.</td><td class="cost">90–180 days</td><td class="go"><a class="tlink" href="https://leader-of-leaders-accelerator.netlify.app/">Details</a></td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
+        <div class="visual">
+          <div class="diamond"><img src="assets/frances.jpg" alt="Frances Strickland"></div>
+          <div class="fc fc-price"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0E1014" stroke-width="2" stroke-linecap="round"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></svg></span><span class="lp">Free <small>5-min scan</small></span></div>
+          <div class="fc fc-now"><span class="dot"></span><span><b>Based in Switzerland</b><br><span style="color:var(--ink-3)">Advising worldwide</span></span></div>
+          <div class="fc fc-ring">
+            <div class="ring"><svg viewBox="0 0 58 58"><circle cx="29" cy="29" r="24" fill="none" stroke="#EEF0F2" stroke-width="7"/><circle cx="29" cy="29" r="24" fill="none" stroke="#C2E54A" stroke-width="7" stroke-linecap="round" stroke-dasharray="151" stroke-dashoffset="38"/></svg><span>3</span></div>
+            <div><b>Continents</b><br><span style="color:var(--ink-3)">of operating experience</span></div>
+          </div>
+          <div class="fc fc-bars">
+            <b>Profit Pulse<sup class="tm">™</sup> reads</b>
+            <div class="cols">
+              <div><small>Structure</small><div class="bar"><i style="width:70%"></i></div></div>
+              <div><small>Leadership</small><div class="bar"><i class="l" style="width:55%"></i></div></div>
+              <div><small>Flow</small><div class="bar"><i style="width:82%"></i></div></div>
+            </div>
+          </div>
+          <div class="fc fc-yrs"><b>30+</b><span>years inside<br>growing businesses</span></div>
+          <a class="call" href="https://calendly.com/timewithfran/strategic-conversation" aria-label="Book a conversation"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#0E1014" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span class="call-lab">Talk to Frances</span></a>
+        </div>
 
-<section class="sec" id="about">
-  <div class="wrap split">
-    <div class="lab"><b>05</b>About</div>
-    <div class="about-grid">
-      <figure><img class="photo" src="assets/frances.jpg" alt="Frances Strickland"><figcaption>Frances Strickland, Crissier, Switzerland.</figcaption></figure>
-      <div>
-        <h2 class="h" style="font-size:clamp(34px,3.8vw,48px)">She did not study businesses under pressure. She ran them.</h2>
-        <p>For more than thirty years Frances worked inside businesses at scale, across industries and continents that most advisors only see from the outside.</p>
-        <p>It shaped how she sees. She spots strain before it shows up in the numbers, and reads the gap between what a business believes it is doing and what its operating system actually produces.</p>
-        <p>She is the founder of V Chastain Global Enterprises, LLC and Principal of Verolead Biz Solutions.</p>
-        <div class="career">
-          <div><span>SC Johnson</span><span>Consumer goods</span></div>
-          <div><span>Bosch</span><span>Engineering &amp; technology</span></div>
-          <div><span>Cummins</span><span>Power systems</span></div>
-          <div><span>Eaton</span><span>Power management</span></div>
-          <div><span>Union Carbide</span><span>Chemicals</span></div>
-          <div><span>Square D</span><span>Electrical equipment</span></div>
+        <div class="trust">
+          <div class="trust-l"><p>Operating experience inside six global companies across several industries.</p></div>
+          <div class="logos"><span>SC Johnson</span><span>Bosch</span><span>Cummins</span><span>Eaton</span><span>Union Carbide</span><span>Square D</span></div>
         </div>
       </div>
     </div>
   </div>
-</section>
+</div>
 
-<section class="sec voices">
-  <div class="wrap split">
-    <div class="lab"><b>06</b>In their words</div>
-    <div>
-      <div class="voice"><blockquote>"Your business is generating revenue but you still cannot explain where the profit went? Fran Strickland will find it. You will not leave a conversation with Fran wondering what to do next. You will leave knowing."</blockquote><div class="who"><b>Suela Pirushi</b><span>Founder, The Milestone Hub. Oxford University PhD Researcher.</span></div></div>
-      <div class="voice"><blockquote>"We reviewed the profitability of the office I was managing, redefined its direction, and built a clear, actionable plan. Each session led to concrete decisions and tangible progress."</blockquote><div class="who"><b>Adrien Auger</b><span>Swiss Office Manager. Physical &amp; Proprietary Trader.</span></div></div>
-      <div class="voice"><blockquote>"She sees what you cannot see in your own business and tells you the truth with both precision and care. Frances does not offer generic advice."</blockquote><div class="who"><b>Paula Washington</b><span>Business &amp; Leadership Strategist. Speaker &amp; Author.</span></div></div>
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="writing">
-  <div class="wrap split">
-    <div class="lab"><b>07</b>Writing</div>
-    <div>
-      <h2 class="h">On why effort and results drift apart.</h2>
-      <div class="toc">
-        <a href="https://francesstrickland.substack.com/p/what-else-did-we-change"><span class="i">Essay</span><span><b>What Else Did We Change?</b><span class="d">The connections we don't see can matter as much as the change we make.</span></span><span class="s">Substack</span></a>
-        <a href="https://francesstrickland.substack.com"><span class="i">Part 1/4</span><span><b>Geography Is Easy to Move. Operating Systems Are Not.</b><span class="d">Expansion problems are rarely about culture or economics. They are about the system.</span></span><span class="s">Substack</span></a>
-        <a href="https://francesstrickland.substack.com"><span class="i">Essay</span><span><b>When Systems Stop Whispering and Start Shouting</b><span class="d">How operating systems signal strain long before performance breaks.</span></span><span class="s">Substack</span></a>
-        <a href="https://francesstrickland.substack.com"><span class="i">Essay</span><span><b>Before Expansion Fails, It Succeeds on Paper</b><span class="d">What to look at before the move, not after.</span></span><span class="s">Substack</span></a>
-      </div>
-      <div class="subline"><span>New essays by email, only when there is something worth saying.</span><a class="tlink" href="https://francesstrickland.substack.com/subscribe">Subscribe</a></div>
-    </div>
-  </div>
-</section>
-
-<section class="sec faq" id="questions">
-  <div class="wrap split">
-    <div class="lab"><b>08</b>Questions</div>
-    <div>
-      <details open><summary>How do I find out where my business is actually losing money?</summary><p>Start with the <a href="https://verolead-profitpulse.netlify.app/">Profit Pulse™</a>. It shows where profitability is leaking, what is driving the gap between effort and outcome, and what to address first for the highest return.</p></details>
-      <details><summary>Why does the business feel harder to run when revenue keeps growing?</summary><p>Usually because its systems were built for an earlier version of the business and are now asked to do more than they were built for.</p></details>
-      <details><summary>How is this different from hiring a typical consultant?</summary><p>Frances has operated inside businesses at scale, across industries, geographies and conditions most advisors only meet from the outside. You get clarity and sequenced action, not a transformation program.</p></details>
-      <details><summary>What happens after the Profit Pulse, and what does it cost?</summary><p>Most people continue with a Performance Clarity Session: one session, one question, a specific action plan. It costs USD 750, CAD 750 or €750.</p></details>
-      <details><summary>I have just stepped into a bigger leadership role. Is there something for that?</summary><p>The Leader of Leaders Accelerator is a 90 to 180 day guided process for newly appointed senior leaders, leadership transitions and post-acquisition integration.</p></details>
-    </div>
-  </div>
-</section>
-</main>
-
-<section class="close">
+<!-- RECOGNITION -->
+<section class="sec" id="recognise">
   <div class="wrap">
-    <h2>Start with five minutes.</h2>
-    <p>Or start with a conversation. A first conversation is for understanding, not selling. Bring the challenge that takes up the most space in your thinking right now.</p>
-    <div class="acts">
-      <a class="btn btn-signal" href="https://verolead-profitpulse.netlify.app/">Begin the Profit Pulse™</a>
-      <a class="btn btn-line" href="https://calendly.com/timewithfran/strategic-conversation">Book a conversation</a>
+    <div class="head reveal">
+      <div><span class="tag"><i>!</i>What operators recognise</span><h2>Six signs your business has outgrown its systems.</h2></div>
+      <p>These are often read as people problems. More often, they are signals from a system built for an earlier version of the business.</p>
+    </div>
+    <div class="grid6 reveal">
+      <div class="fcard"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0E1014" stroke-width="1.8" stroke-linecap="round"><path d="M3 7l6 6 4-4 8 8"/><path d="M15 17h6v-6"/></svg></div><h3>Revenue without profit</h3><p>Revenue is there. The profit is somewhere else.</p></div>
+      <div class="fcard"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0E1014" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="7" width="18" height="13" rx="3"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></div><h3>Heavier to run</h3><p>What used to feel like momentum now feels like management.</p></div>
+      <div class="fcard"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0E1014" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="7" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div><h3>Founder-dependent</h3><p>Too much still depends on the founder. Nothing moves without constant help.</p></div>
+      <div class="fcard"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0E1014" stroke-width="1.8" stroke-linecap="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg></div><h3>Customer experience slipping</h3><p>Somewhere between the decision and the delivery, something gets lost.</p></div>
+      <div class="fcard"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0E1014" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></div><h3>Growth exposed gaps</h3><p>The model that worked at a smaller size does not travel well.</p></div>
+      <div class="fcard"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0E1014" stroke-width="1.8" stroke-linecap="round"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg></div><h3>Effort outpaces results</h3><p>Leadership is working harder than the results justify. The output is uneven.</p></div>
+    </div>
+    <div class="banner reveal"><p>Recognise two or more? <b>The Profit Pulse<sup class="tm">™</sup> shows which one is costing you most.</b></p><a class="btn btn-lime" href="https://verolead-profitpulse.netlify.app/">Run the free scan</a></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="sec" style="padding-top:0" id="about">
+  <div class="wrap">
+    <div class="about reveal">
+      <div class="pic">
+        <img src="assets/frances.jpg" alt="Frances Strickland">
+        <span class="loc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0E1014" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Crissier, Switzerland</span>
+        <div class="badge"><b>30+</b><span>years running businesses from the inside</span></div>
+      </div>
+      <div class="txt">
+        <span class="tag" style="align-self:flex-start;background:var(--soft)"><i>F</i>About Frances</span>
+        <h2>She didn't study how businesses run under pressure. She ran them.</h2>
+        <p>For more than 30 years Frances worked inside businesses at scale, across industries and continents that most advisors only see from the outside. She spots strain before it shows up in the numbers.</p>
+        <p>Today she advises founder-led and operationally complex businesses. She is the founder of V Chastain Global Enterprises, LLC and Principal of Verolead Biz Solutions.</p>
+        <div class="stats">
+          <div class="st blue"><b>3</b><span>continents of direct operating experience</span></div>
+          <div class="st"><b>6</b><span>global companies across industries</span></div>
+          <div class="st"><b>4</b><span>ways to work together, from free to ongoing</span></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
+<!-- PROFIT PULSE -->
+<section class="sec dark" id="profit-pulse">
+  <div class="wrap">
+    <div class="pp-top reveal">
+      <div>
+        <span class="tag"><i>5′</i>The Profit Pulse<sup class="tm">™</sup></span>
+        <h2>A free five-minute scan that shows where profit may be leaking.</h2>
+        <p>A focused diagnostic, not a sales funnel. It reads the three operating conditions that decide whether profitability is predictable, or depends on the owner stepping in constantly.</p>
+        <div class="acts"><a class="btn btn-lime" href="https://verolead-profitpulse.netlify.app/">Begin the Profit Pulse<sup class="tm">™</sup></a><a class="btn btn-ghost" href="#pricing">What happens after</a></div>
+      </div>
+      <div class="scanc">
+        <div class="h"><b>What the scan reads</b><span>For 1–15, 15–50 and 50+ teams</span></div>
+        <div class="rows">
+          <div class="r">Structure<p>How ownership, priorities and decisions are set, and whether the foundation scales.</p></div>
+          <div class="r">Leadership<p>Where accountability or clarity is stretched.</p></div>
+          <div class="r">Flow<p>Where work stalls or repeats, and whether financial signals arrive in time.</p></div>
+        </div>
+        <div class="levels">
+          <div style="background:#E9F6D0">Strong Position</div>
+          <div style="background:#FBEFC8">Hidden Risk Signals</div>
+          <div style="background:#FBD9C4">Elevated Risk</div>
+          <div style="background:#F8C1C1">Critical Attention</div>
+        </div>
+      </div>
+    </div>
+    <div class="steps reveal">
+      <div class="step"><div class="top"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0E1014" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span class="n">Step 01</span></div><h3>Answer for five minutes</h3><p>Questions across Structure, Leadership and Flow. No cash, no card.</p></div>
+      <div class="step"><div class="top"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0E1014" stroke-width="2" stroke-linecap="round"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg></span><span class="n">Step 02</span></div><h3>Get your risk profile</h3><p>An immediate result, from Strong Position to Critical Attention Required.</p></div>
+      <div class="step"><div class="top"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0E1014" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg></span><span class="n">Step 03</span></div><h3>See your one focus area</h3><p>The single most important thing to address, sent to your inbox.</p></div>
+      <div class="step"><div class="top"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0E1014" stroke-width="2" stroke-linecap="round"><path d="M6 3v12M18 9v12M6 15a6 6 0 0 0 12-6"/></svg></span><span class="n">Step 04</span></div><h3>Choose your path</h3><p>Act alone, invite a review, book a free advisory, or go deeper.</p></div>
+    </div>
+    <div class="promise reveal"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0E1014" stroke-width="2" stroke-linecap="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span><p><b style="color:#fff">The promise:</b> keep your results private and Frances will not contact you. No follow-up emails or messages unless you invite it.</p></div>
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<section class="sec" style="padding-bottom:0">
+  <div class="wrap">
+    <div class="strip reveal">
+      <div><h3>Know something is off, but can't say what?</h3><p>Pick your stage and start. It takes five minutes.</p></div>
+      <div class="form">
+        <select aria-label="Business stage"><option>Early stage · 1–15 people</option><option selected>Growth stage · 15–50 people</option><option>Mature stage · 50+ people</option></select>
+        <a class="btn btn-ink" href="https://verolead-profitpulse.netlify.app/">Get my risk profile</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="sec" id="pricing">
+  <div class="wrap">
+    <div class="center reveal"><span class="tag"><i>$</i>Ways to work together</span><h2>Start free. Go further only when it's worth it.</h2><p>Most engagements begin with a Profit Pulse<sup class="tm">™</sup>. You decide what happens next at every step.</p></div>
+    <div class="price reveal">
+      <div class="pc feat"><div class="lab">Step 01<span>Start here</span></div><h3>Profit Pulse<sup class="tm">™</sup></h3><div class="amt">Free <small>/ 5 min</small></div><ul><li>Structure, Leadership and Flow scan</li><li>Instant risk profile</li><li>One immediate focus area</li><li>Results sent to your inbox</li></ul><a class="btn btn-lime" href="https://verolead-profitpulse.netlify.app/">Begin the scan</a></div>
+      <div class="pc"><div class="lab">Step 02<span>After the scan</span></div><h3>Profit Pulse Advisory</h3><div class="amt">$0 <small>/ 30 min</small></div><ul><li>Examine one finding with Frances</li><li>No cash investment</li><li>Booked from your results</li></ul><a class="btn btn-white" href="https://verolead-profitpulse.netlify.app/">Take the scan first</a></div>
+      <div class="pc"><div class="lab">Step 03<span>One session</span></div><h3>Performance Clarity Session</h3><div class="amt">$750 <small>/ CAD · €</small></div><ul><li>One working session, one question</li><li>Find the underlying mechanism</li><li>Leave with a practical plan</li></ul><a class="btn btn-ink" href="https://calendly.com/timewithfran/performance_clarity">Schedule a session</a></div>
+      <div class="pc"><div class="lab">Step 04<span>Ongoing</span></div><h3>Predictable Performance &amp; Profitability</h3><div class="amt">Custom</div><ul><li>For uneven execution</li><li>For leaders under steady pressure</li><li>For profit that doesn't match effort</li></ul><a class="btn btn-white" href="https://performance-and-profitability.netlify.app/">Learn more</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMS -->
+<section class="sec" style="padding-top:0" id="programs">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><span class="tag"><i>→</i>Other starting points</span><h2>Where do you recognise yourself?</h2></div>
+      <div class="ctrl"><button id="prev" aria-label="Previous">←</button><button id="next" aria-label="Next">→</button></div>
+    </div>
+    <div class="track reveal" id="track">
+      <a class="prog" href="https://calendly.com/timewithfran/momentum"><span class="no">01 · If you are building independently</span><h3>Momentum</h3><p>For consultants, coaches, service providers and small business owners who know what they do but have lost clarity on what to focus on.</p><div class="f"><span>One conversation</span><span class="go">↗</span></div></a>
+      <a class="prog" href="https://cross-border-readiness.netlify.app/"><span class="no">02 · If you are expanding</span><h3>Cross-Border Readiness</h3><p>The operating model that built the business rarely travels without changes. This shows where it will break before you make the move.</p><div class="f"><span>Before you enter a market</span><span class="go">↗</span></div></a>
+      <a class="prog" href="https://leader-of-leaders-accelerator.netlify.app/"><span class="no">03 · If you just stepped up</span><h3>Leader of Leaders Accelerator</h3><p>A guided process for senior leaders of leaders, using the MindTime thinking assessment. For new leaders, transitions and post-acquisition integration.</p><div class="f"><span>90–180 days</span><span class="go">↗</span></div></a>
+      <a class="prog" href="https://performance-and-profitability.netlify.app/"><span class="no">04 · If you lead an established business</span><h3>Predictable Performance &amp; Profitability</h3><p>For businesses where execution is uneven, leaders are under steady pressure, and profit does not match the effort going in.</p><div class="f"><span>Ongoing</span><span class="go">↗</span></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- PERSPECTIVE -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="persp reveal">
+      <div class="l">
+        <span class="tag" style="background:var(--soft)"><i>i</i>Perspective</span>
+        <h2>Businesses are not broken. They are compensating.</h2>
+        <p>Most problems in a growing business are the visible signs of systems built for an earlier version of the business, now asked to do more than they were built for.</p>
+        <p>Frances starts with how decisions actually move, and where accountability lives in practice rather than on the org chart.</p>
+        <a class="btn btn-ink" style="margin-top:14px" href="https://calendly.com/timewithfran/strategic-conversation">Start a conversation</a>
+      </div>
+      <div class="r">
+        <h3>She looks for where:</h3>
+        <div class="lk"><i>1</i>growth exposed strain that was hidden at a smaller size</div>
+        <div class="lk"><i>2</i>execution became uneven despite good people</div>
+        <div class="lk"><i>3</i>profit slipped without an obvious cause in the numbers</div>
+        <div class="lk"><i>4</i>a worsening customer experience is an operating signal</div>
+        <div class="lk"><i>5</i>dependence on the founder became a limit</div>
+        <div class="lk"><i>6</i>a new market showed the model does not travel</div>
+        <div class="lk"><i>7</i>pressure on leaders became normal</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="center reveal"><span class="tag"><i>“</i>What leaders say</span><h2>What working with Frances produces.</h2></div>
+    <div class="tgrid reveal">
+      <div class="tc"><span class="qm">”</span><div class="who"><span class="av">SP</span><div><b>Suela Pirushi</b><span>Founder, The Milestone Hub · Oxford University PhD Researcher</span></div></div><blockquote>"Your business is generating revenue but you still cannot explain where the profit went? Fran Strickland will find it. You will not leave a conversation with Fran wondering what to do next. You will leave knowing."</blockquote></div>
+      <div class="tc"><span class="qm">”</span><div class="who"><span class="av">AA</span><div><b>Adrien Auger</b><span>Swiss Office Manager · Physical &amp; Proprietary Trader</span></div></div><blockquote>"We reviewed the profitability of the office I was managing, redefined its direction, and built a clear, actionable plan. Each session led to concrete decisions and tangible progress."</blockquote></div>
+      <div class="tc"><span class="qm">”</span><div class="who"><span class="av">PW</span><div><b>Paula Washington</b><span>Business &amp; Leadership Strategist · Speaker &amp; Author</span></div></div><blockquote>"She sees what you cannot see in your own business and tells you the truth with both precision and care. That level of clarity is rare."</blockquote></div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="sec" style="padding-top:0" id="insights">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><span class="tag"><i>✎</i>Insights</span><h2>Strategic conversations in print.</h2></div>
+      <a class="btn btn-white" href="https://francesstrickland.substack.com">All essays on Substack</a>
+    </div>
+    <div class="blog reveal">
+      <a class="bp" href="https://francesstrickland.substack.com/p/what-else-did-we-change"><div class="cv" style="background:var(--navy)"><svg viewBox="0 0 300 170" preserveAspectRatio="none"><path d="M0 100h110l12-40 16 64 14-46 10 22h138" fill="none" stroke="#D6F36B" stroke-width="3"/></svg><span class="chip">Essay</span></div><div class="in"><small>Change</small><h3>What Else Did We Change?</h3><p>The connections we don't see can matter as much as the change we make.</p><span class="more">Read essay ↗</span></div></a>
+      <a class="bp" href="https://francesstrickland.substack.com"><div class="cv" style="background:var(--lime)"><svg viewBox="0 0 300 170"><rect x="150" y="10" width="110" height="110" rx="26" transform="rotate(45 205 65)" fill="none" stroke="#0E1014" stroke-width="2"/><rect x="40" y="70" width="80" height="80" rx="20" transform="rotate(45 80 110)" fill="none" stroke="#0E1014" stroke-width="2"/></svg><span class="chip">Part 1/4</span></div><div class="in"><small>Expansion</small><h3>Geography Is Easy to Move. Operating Systems Are Not.</h3><p>Why expansion problems are almost always about the system.</p><span class="more">Read essay ↗</span></div></a>
+      <a class="bp" href="https://francesstrickland.substack.com"><div class="cv" style="background:#DDE1E6"><svg viewBox="0 0 300 170" preserveAspectRatio="none"><path d="M0 110 Q50 100 90 110 T170 100 T240 50 T300 130" fill="none" stroke="#0E1014" stroke-width="3"/></svg><span class="chip">Essay</span></div><div class="in"><small>Systems</small><h3>When Systems Stop Whispering and Start Shouting</h3><p>How operating systems signal strain long before performance breaks.</p><span class="more">Read essay ↗</span></div></a>
+      <a class="bp" href="https://francesstrickland.substack.com"><div class="cv" style="background:var(--ink)"><svg viewBox="0 0 300 170"><rect x="50" y="50" width="90" height="70" rx="14" fill="none" stroke="#fff" stroke-width="2"/><rect x="160" y="50" width="90" height="70" rx="14" fill="none" stroke="#D6F36B" stroke-width="2" stroke-dasharray="7 7"/></svg><span class="chip">Essay</span></div><div class="in"><small>Expansion</small><h3>Before Expansion Fails, It Succeeds on Paper</h3><p>What to look at before the move, not after.</p><span class="more">Read essay ↗</span></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- CONSULT + FAQ -->
+<section class="dark">
+  <div class="wrap consult">
+    <div class="reveal">
+      <span class="tag"><i>?</i>Common questions</span>
+      <h2>The right starting point depends on where you are now.</h2>
+      <p class="lede">A first conversation is for understanding, not selling.</p>
+      <div class="faq">
+        <details open><summary>How do I find where my business is losing profitability?</summary><p>Start with the <a href="https://verolead-profitpulse.netlify.app/">Profit Pulse<sup class="tm">™</sup></a>. It shows where profitability is leaking, what drives the gap between effort and outcome, and what to address first.</p></details>
+        <details><summary>Why does it feel harder to run when revenue keeps growing?</summary><p>Usually because its systems were built for an earlier version of the business and are now asked to do more than they were built for.</p></details>
+        <details><summary>How is this different from a typical consultant?</summary><p>Frances has operated inside businesses at scale, across industries and geographies. The result is clarity and sequenced action, not a transformation program.</p></details>
+        <details><summary>What happens after the Profit Pulse, and what does it cost?</summary><p>Most people continue with a Performance Clarity Session: one session, one question, a specific action plan. Investment is USD 750, CAD 750 or €750.</p></details>
+      </div>
+    </div>
+    <div class="book reveal">
+      <h3>Choose how to begin</h3>
+      <p>Bring the challenge taking up the most space in your thinking right now.</p>
+      <a class="opt main" href="https://verolead-profitpulse.netlify.app/"><div><b>Profit Pulse<sup class="tm">™</sup> scan</b><small>Free · 5 minutes · start now</small></div><i>→</i></a>
+      <a class="opt" href="https://calendly.com/timewithfran/strategic-conversation"><div><b>Strategic Conversation</b><small>Understanding, not selling</small></div><i>→</i></a>
+      <a class="opt" href="https://calendly.com/timewithfran/performance_clarity"><div><b>Performance Clarity Session</b><small>USD · CAD · € 750</small></div><i>→</i></a>
+      <a class="opt" href="https://www.linkedin.com/in/francesmelvinastrickland"><div><b>Connect on LinkedIn</b><small>Follow Frances's thinking</small></div><i>→</i></a>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER + FOOTER -->
 <footer>
   <div class="wrap">
-    <span>© 2026 V Chastain Global Enterprises, LLC · Verolead Biz Solutions</span>
-    <nav><a href="https://francesstrickland.substack.com">Substack</a><a href="https://www.linkedin.com/in/francesmelvinastrickland">LinkedIn</a><a href="https://calendly.com/timewithfran/strategic-conversation">Book</a></nav>
+    <div class="news reveal"><div><h3>Get new essays by email.</h3><p>Free, and only when there is something worth saying.</p></div><a class="btn btn-lime" href="https://francesstrickland.substack.com/subscribe">Subscribe on Substack</a></div>
+    <div class="fgrid" style="margin-top:72px">
+      <div><a class="logo" href="#"><svg width="34" height="34" viewBox="0 0 34 34"><rect x="4" y="4" width="26" height="26" rx="7" transform="rotate(45 17 17)" fill="#0E1014"/><path d="M9 17h5l2-5 3 10 2-5h4" fill="none" stroke="#D6F36B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Frances Strickland</a><p class="about-f">Strategic Performance &amp; Profitability Advisor for founder-led businesses whose growth has outpaced their systems.</p><a class="btn btn-ink" href="https://verolead-profitpulse.netlify.app/">Free Profit Pulse<sup class="tm">™</sup></a></div>
+      <div><h4>Work together</h4><ul><li><a href="https://verolead-profitpulse.netlify.app/">Profit Pulse<sup class="tm">™</sup></a></li><li><a href="https://calendly.com/timewithfran/performance_clarity">Clarity Session</a></li><li><a href="https://performance-and-profitability.netlify.app/">Performance &amp; Profitability</a></li><li><a href="https://cross-border-readiness.netlify.app/">Cross-Border Readiness</a></li><li><a href="https://leader-of-leaders-accelerator.netlify.app/">Leader of Leaders</a></li></ul></div>
+      <div><h4>Explore</h4><ul><li><a href="#recognise">How I help</a></li><li><a href="#about">About Frances</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#insights">Insights</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="https://calendly.com/timewithfran/strategic-conversation">Book a conversation</a></li><li><a href="https://www.linkedin.com/in/francesmelvinastrickland">LinkedIn</a></li><li><a href="https://francesstrickland.substack.com">Substack</a></li><li>Crissier, Switzerland</li></ul></div>
+    </div>
+    <div class="copy"><span>© 2026 V Chastain Global Enterprises, LLC</span><span>Verolead Biz Solutions</span></div>
   </div>
 </footer>
 
 <script>
-const boxes=[...document.querySelectorAll('#checks input')],count=document.getElementById('count'),
-      txt=document.getElementById('tallyText'),tally=document.getElementById('tally');
-const lines=["Tick what applies. There is no score here, only a starting point.",
-  "One is worth watching. The scan will tell you whether it is isolated or a symptom.",
-  "Two usually share a cause. The Profit Pulse™ shows which one.",
-  "Three or more usually point to the system, not the people.",
-  "Three or more usually point to the system, not the people.",
-  "This is the pattern the Profit Pulse™ was built for.",
-  "This is the pattern the Profit Pulse™ was built for."];
-boxes.forEach(b=>b.addEventListener('change',()=>{const n=boxes.filter(x=>x.checked).length;
-  count.textContent=n;txt.textContent=lines[n];tally.classList.toggle('hot',n>=2)}));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const tr=document.getElementById('track'),step=()=>tr.querySelector('.prog').offsetWidth+20;
+document.getElementById('next').onclick=()=>tr.scrollBy({left:step(),behavior:'smooth'});
+document.getElementById('prev').onclick=()=>tr.scrollBy({left:-step(),behavior:'smooth'});
 </script>
 </body>
 </html>
