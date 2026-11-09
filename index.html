@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Frances Strickland · Website Redesign Proposal</title>
-<meta name="description" content="Redesign proposal for francesstrickland.com: three homepage directions and their style guides, built around the Profit Pulse™.">
+<title>Frances Strickland · Website Proposal</title>
+<meta name="description" content="A concise proposal for francesstrickland.com: one home for Profit Pulse™, a site built to convert, visibility on Google and clear measurement.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300..800&display=swap" rel="stylesheet">
@@ -15,10 +15,10 @@ body{font-family:var(--font);font-size:17px;line-height:1.6;color:var(--ink);bac
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
 sup.tm{font-family:Arial,sans-serif;font-size:.5em;vertical-align:super;line-height:0;font-weight:400}
-.wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
 @media(max-width:600px){.wrap{padding:0 14px}}
 .tag{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--ink-2);background:var(--soft);border:1px solid var(--line);padding:6px 14px 6px 8px;border-radius:999px}
-.tag i{width:20px;height:20px;border-radius:50%;background:var(--lime);display:grid;place-items:center;font-style:normal;font-size:11px;font-weight:800}
+.tag i{width:20px;height:20px;border-radius:50%;background:var(--lime);display:grid;place-items:center;font-style:normal;font-size:11px;font-weight:800;color:var(--ink)}
 .btn{display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;padding:15px 28px;border-radius:999px;transition:transform .2s}
 .btn:hover{transform:translateY(-2px)}
 .btn-ink{background:var(--ink);color:#fff}.btn-lime{background:var(--lime);color:var(--ink)}
@@ -27,78 +27,90 @@ sup.tm{font-family:Arial,sans-serif;font-size:.5em;vertical-align:super;line-hei
 @media(max-width:700px){.hero{padding:22px 22px 40px;border-radius:26px}}
 .hero::after{content:"";position:absolute;right:-140px;top:60px;width:480px;height:480px;border-radius:100px;background:var(--soft);transform:rotate(45deg)}
 .hero>*{position:relative;z-index:1}
-.top{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:64px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:64px}
 .logo{display:flex;align-items:center;gap:12px;font-weight:700;font-size:19px}
 .top span.m{font-size:14px;font-weight:600;color:var(--ink-3)}
-.hero h1{font-size:clamp(42px,6vw,80px);font-weight:500;letter-spacing:-.035em;line-height:1.03;max-width:900px;margin:20px 0 22px}
+.hero h1{font-size:clamp(40px,5.6vw,74px);font-weight:500;letter-spacing:-.035em;line-height:1.04;max-width:900px;margin:20px 0 22px}
 .hero h1 .u{position:relative;display:inline-block}
 .hero h1 .u svg{position:absolute;left:-2%;bottom:-6px;width:104%;height:18px}
-.hero .sub{font-size:19px;color:var(--ink-2);max-width:620px}
+.hero .sub{font-size:19px;color:var(--ink-2);max-width:640px}
 .hero .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
-.facts{display:flex;gap:12px;flex-wrap:wrap;margin-top:44px}
-.fact{background:#fff;border-radius:18px;box-shadow:var(--sh);padding:12px 16px;display:flex;align-items:center;gap:12px;font-size:14px;line-height:1.3}
-.fact b{font-size:15px}
-.fact .lp{background:var(--lime);border-radius:999px;padding:5px 12px;font-weight:700}
 
-.sec{padding:88px 0 0}
-.head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:32px}
-.head h2{font-size:clamp(32px,3.8vw,48px);font-weight:600;letter-spacing:-.025em;line-height:1.08;margin-top:14px;max-width:640px}
-.head p{color:var(--ink-2);max-width:420px}
+.sec{padding:80px 0 0}
+.head{margin-bottom:28px}
+.head h2{font-size:clamp(30px,3.6vw,46px);font-weight:600;letter-spacing:-.025em;line-height:1.08;margin-top:14px;max-width:760px}
+.head p{color:var(--ink-2);max-width:640px;margin-top:12px}
 
-.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+/* Where things stand */
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:860px){.facts{grid-template-columns:1fr}}
+.fact{background:#fff;border-radius:26px;padding:28px}
+.fact .n{font-size:44px;font-weight:600;letter-spacing:-.03em;line-height:1}
+.fact .n small{font-size:18px;font-weight:600;color:var(--ink-3);margin-left:4px;letter-spacing:0}
+.fact h3{font-size:19px;font-weight:600;margin:16px 0 6px;line-height:1.25}
+.fact p{font-size:15.5px;color:var(--ink-2)}
+.insight{margin-top:16px;background:var(--navy);color:#fff;border-radius:26px;padding:26px 30px;font-size:clamp(19px,2vw,23px);font-weight:500;letter-spacing:-.01em;line-height:1.4}
+.insight b{color:var(--lime);font-weight:600}
 
-@media(max-width:660px){.cards{grid-template-columns:1fr}}
-.card{background:#fff;border-radius:28px;padding:12px;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
-.card:hover{transform:translateY(-6px);box-shadow:0 30px 60px rgba(14,16,20,.12)}
-.shot{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:16/10;background:var(--soft)}
-.shot img{width:100%;height:100%;object-fit:cover;object-position:top left;transition:transform .6s ease}
-.card:hover .shot img{transform:scale(1.04)}
-.badge{position:absolute;left:12px;top:12px;background:var(--lime);border-radius:999px;padding:6px 12px;font-size:13px;font-weight:700}
-.badge.dark{background:var(--ink);color:#fff}
-.card .in{padding:20px 14px 12px;display:flex;flex-direction:column;flex:1}
-.card .meta{display:flex;justify-content:space-between;font-size:13.5px;font-weight:600;color:var(--ink-3);margin-bottom:10px}
-.card h3{font-size:25px;font-weight:600;letter-spacing:-.02em;line-height:1.12;margin-bottom:8px}
-.card p{color:var(--ink-2);font-size:15.5px;flex:1}
-.card .go{margin-top:20px;display:flex;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid var(--line);font-weight:700;font-size:15px}
-.card .go i{font-style:normal;width:42px;height:42px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;transition:background .2s,color .2s}
-.card:hover .go i{background:var(--lime);color:var(--ink)}
-.card.rec{background:var(--ink);color:#fff}
-.card.rec p{color:#C3C8D0}.card.rec .meta{color:#9AA1AC}.card.rec .go{border-color:rgba(255,255,255,.12)}
-.card.rec .go i{background:var(--lime);color:var(--ink)}
-.also{margin-top:20px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;font-size:14.5px;color:var(--ink-3)}
-.also a{background:#fff;border-radius:999px;padding:8px 16px;font-weight:600;color:var(--ink)}
-.also a:hover{background:var(--lime)}
+/* What we'll do */
+.pillars{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+@media(max-width:760px){.pillars{grid-template-columns:1fr}}
+.pillar{background:#fff;border-radius:26px;padding:30px;display:flex;flex-direction:column}
+.pillar .k{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}
+.pillar .k span{font-size:13.5px;font-weight:700;color:var(--ink-3)}
+.pillar .k i{width:46px;height:46px;border-radius:14px;background:var(--lime);display:grid;place-items:center}
+.pillar h3{font-size:24px;font-weight:600;letter-spacing:-.02em;line-height:1.15;margin-bottom:10px}
+.pillar>p{color:var(--ink-2);font-size:15.5px}
+.pillar ul{list-style:none;margin-top:18px;border-top:1px solid var(--line);padding-top:8px}
+.pillar li{display:flex;gap:10px;padding:7px 0;font-size:15px;color:var(--ink-2);line-height:1.45}
+.pillar li::before{content:"";flex:none;width:18px;height:18px;border-radius:50%;margin-top:2px;background:var(--soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M6 10.5l2.5 2.5L14 7.5' fill='none' stroke='%230E1014' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.pillar.dark{background:var(--ink);color:#fff}
+.pillar.dark>p,.pillar.dark li{color:#C3C8D0}
+.pillar.dark .k span{color:#9AA1AC}
+.pillar.dark ul{border-color:rgba(255,255,255,.12)}
+.pillar.dark li::before{background-color:var(--lime)}
 
-.strategy{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-@media(max-width:900px){.strategy{grid-template-columns:1fr}}
-.box{background:#fff;border-radius:28px;padding:34px}
-.box h3{font-size:22px;font-weight:600;margin-bottom:16px}
-.box ul{list-style:none}
-.box li{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);font-size:15.5px;color:var(--ink-2)}
-.box li:last-child{border:0}
-.box li::before{content:"";flex:none;width:20px;height:20px;border-radius:50%;margin-top:2px}
-.box.bad li::before{background:#FDE2E2 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M7 7l6 6M13 7l-6 6' fill='none' stroke='%23B42318' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E")}
-.box.good li::before{background:var(--lime) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M6 10.5l2.5 2.5L14 7.5' fill='none' stroke='%230E1014' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
-.path{margin-top:20px;background:var(--navy);border-radius:28px;padding:30px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;color:#fff}
+/* Outcomes */
+.outs{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:980px){.outs{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.outs{grid-template-columns:1fr}}
+.out{background:#fff;border-radius:22px;padding:24px}
+.out b{display:block;font-size:18px;font-weight:600;line-height:1.25;margin-bottom:8px}
+.out span{font-size:15px;color:var(--ink-2);line-height:1.5;display:block}
+
+/* Process */
+.path{background:var(--navy);border-radius:28px;padding:28px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;color:#fff}
 @media(max-width:900px){.path{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.path{grid-template-columns:1fr}}
 .path div{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:20px}
 .path div:first-child{background:var(--lime);color:var(--ink);border-color:var(--lime)}
 .path small{font-size:13px;font-weight:700;opacity:.7}
-.path b{display:block;font-size:20px;font-weight:600;letter-spacing:-.02em;margin:6px 0 4px;line-height:1.15}
-.path span{font-size:14.5px;opacity:.85}
+.path b{display:block;font-size:20px;font-weight:600;letter-spacing:-.02em;margin:6px 0 6px;line-height:1.15}
+.path span{font-size:14.5px;opacity:.85;line-height:1.5;display:block}
 
-.refs{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
-@media(max-width:1020px){.refs{grid-template-columns:repeat(2,1fr)}}
-.ref{background:#fff;border-radius:22px;padding:20px;transition:background .2s}
-.ref:hover{background:var(--lime)}
-.ref b{display:block;font-size:16px;margin-bottom:6px}
-.ref span{font-size:14px;color:var(--ink-2);line-height:1.45;display:block}
-.ref em{display:inline-block;margin-top:12px;font-style:normal;font-size:12px;font-weight:700;background:var(--soft);border-radius:999px;padding:4px 10px}
+/* Mockups */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:960px){.cards{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.cards{grid-template-columns:1fr}}
+.card{background:#fff;border-radius:26px;padding:12px;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-6px);box-shadow:0 30px 60px rgba(14,16,20,.12)}
+.shot{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:16/10;background:var(--soft)}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:top left;transition:transform .6s ease}
+.card:hover .shot img{transform:scale(1.04)}
+.card .in{padding:18px 12px 10px;display:flex;flex-direction:column;flex:1}
+.card .meta{font-size:13.5px;font-weight:600;color:var(--ink-3);margin-bottom:6px}
+.card h3{font-size:22px;font-weight:600;letter-spacing:-.02em;line-height:1.15;margin-bottom:6px}
+.card p{color:var(--ink-2);font-size:15px;flex:1}
+.card .go{margin-top:16px;display:flex;justify-content:space-between;align-items:center;padding-top:14px;border-top:1px solid var(--line);font-weight:700;font-size:15px}
+.card .go i{font-style:normal;width:40px;height:40px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;transition:background .2s,color .2s}
+.card:hover .go i{background:var(--lime);color:var(--ink)}
+.card.rec{background:var(--ink);color:#fff}
+.card.rec p{color:#C3C8D0}.card.rec .meta{color:#9AA1AC}.card.rec .go{border-color:rgba(255,255,255,.12)}
+.card.rec .go i{background:var(--lime);color:var(--ink)}
 
-.next{margin:88px 0 0;background:var(--ink);color:#fff;border-radius:36px;padding:48px;display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap}
+.next{margin:80px 0 0;background:var(--ink);color:#fff;border-radius:36px;padding:48px;display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap}
 @media(max-width:600px){.next{padding:30px;border-radius:26px}}
-.next h2{font-size:clamp(28px,3.4vw,42px);font-weight:600;letter-spacing:-.025em;line-height:1.1;max-width:720px}
+.next h2{font-size:clamp(28px,3.2vw,40px);font-weight:600;letter-spacing:-.025em;line-height:1.1;max-width:700px}
 .next p{color:#9AA1AC;margin-top:10px;max-width:640px}
 footer{padding:36px 0 44px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:14px;color:var(--ink-3)}
 </style>
@@ -109,68 +121,144 @@ footer{padding:36px 0 44px;display:flex;justify-content:space-between;flex-wrap:
 <header class="hero">
   <div class="top">
     <a class="logo" href="#"><svg width="34" height="34" viewBox="0 0 34 34"><rect x="4" y="4" width="26" height="26" rx="7" transform="rotate(45 17 17)" fill="#0E1014"/><path d="M9 17h5l2-5 3 10 2-5h4" fill="none" stroke="#D6F36B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Frances Strickland</a>
-    <span class="m">Website redesign proposal · November 2026</span>
+    <span class="m">Website proposal · November 2026</span>
   </div>
   <span class="tag"><i>✓</i>Prepared for Frances Strickland</span>
-  <h1>A refreshed website with <span class="u">Profit Pulse<sup class="tm">™</sup><svg viewBox="0 0 200 18" preserveAspectRatio="none"><path d="M3 12C40 4 90 3 120 8s50 6 77-2" fill="none" stroke="#C2E54A" stroke-width="5" stroke-linecap="round"/></svg></span> as the front door.</h1>
-  <p class="sub">Three homepage directions for francesstrickland.com. Each one makes the free five-minute scan the first step of every path, from first visit to ongoing engagement.</p>
-  <div class="acts"><a class="btn btn-ink" href="design-b.html">View Homepage B</a><a class="btn btn-lime" href="#work">See all pages</a></div>
+  <h1>A website that brings you <span class="u">qualified leads<svg viewBox="0 0 200 18" preserveAspectRatio="none"><path d="M3 12C40 4 90 3 120 8s50 6 77-2" fill="none" stroke="#C2E54A" stroke-width="5" stroke-linecap="round"/></svg></span>, not just visitors.</h1>
+  <p class="sub">Following our conversation: one home for Profit Pulse<sup class="tm">™</sup>, a site built around a single next step, visibility on Google, and clear numbers on what is working.</p>
+  <div class="acts"><a class="btn btn-ink" href="#plan">See the plan</a><a class="btn btn-lime" href="#designs">View the designs</a></div>
 </header>
 
-<section class="sec" id="work">
-  <div class="head"><div><span class="tag"><i>→</i>The pages</span><h2>Open a page to explore it.</h2></div></div>
-  <div class="cards">
-    <a class="card rec" href="design-b.html">
-      <div class="shot"><img src="assets/previews/design-b.png" alt="Homepage B"><span class="badge">Homepage</span></div>
-      <div class="in">
-        <div class="meta"><span>01</span><span>Modern refresh</span></div>
-        <h3>Homepage B</h3>
-        <p>A modern, refreshed identity. Profit Pulse<sup class="tm">™</sup> leads every section, from the first screen to the final call to action.</p>
-        <div class="go"><span>Open homepage</span><i>→</i></div>
-      </div>
-    </a>
-    <a class="card" href="design-c.html">
-      <div class="shot"><img src="assets/previews/design-c.png" alt="Homepage C"><span class="badge dark">Homepage</span></div>
-      <div class="in">
-        <div class="meta"><span>02</span><span>Corporate navy</span></div>
-        <h3>Homepage C</h3>
-        <p>A professional agency layout in navy and blue, with services, a Profit Pulse<sup class="tm">™</sup> process, investment options and insights.</p>
-        <div class="go"><span>Open homepage</span><i>→</i></div>
-      </div>
-    </a>
-    <a class="card" href="style-guide-b.html">
-      <div class="shot"><img src="assets/previews/style-guide-b.png" alt="Style Guide B"><span class="badge dark">Style guide</span></div>
-      <div class="in">
-        <div class="meta"><span>03</span><span>For Homepage B</span></div>
-        <h3>Style Guide B</h3>
-        <p>The colours, typography, buttons and components behind Homepage B, and how Profit Pulse<sup class="tm">™</sup> is presented.</p>
-        <div class="go"><span>Open guide</span><i>→</i></div>
-      </div>
-    </a>
-    <a class="card" href="design-a-editorial.html">
-      <div class="shot"><img src="assets/previews/design-a-editorial.png" alt="Homepage A"><span class="badge dark">Homepage</span></div>
-      <div class="in">
-        <div class="meta"><span>04</span><span>Editorial</span></div>
-        <h3>Homepage A</h3>
-        <p>An editorial direction in navy and peach, with a sample Profit Pulse<sup class="tm">™</sup> risk profile and a clear four-step path.</p>
-        <div class="go"><span>Open homepage</span><i>→</i></div>
-      </div>
-    </a>
+<section class="sec">
+  <div class="head"><span class="tag"><i>1</i>Where things stand</span><h2>The current setup works against the leads you want.</h2></div>
+  <div class="facts">
+    <div class="fact">
+      <div class="n">1<small>page</small></div>
+      <h3>Little for Google to find</h3>
+      <p>Your sitemap lists a single page. There is no dedicated page for the problems you solve, so there is little for search engines to rank.</p>
+    </div>
+    <div class="fact">
+      <div class="n">4<small>separate sites</small></div>
+      <h3>Your funnel lives elsewhere</h3>
+      <p>Profit Pulse<sup class="tm">™</sup> and your offers sit on separate netlify.app addresses. The trust they earn builds those sites, not francesstrickland.com.</p>
+    </div>
+    <div class="fact">
+      <div class="n">0<small>analytics</small></div>
+      <h3>No view of what happens</h3>
+      <p>No analytics tag is installed on the homepage, so there is no way to see where visitors come from or where they leave.</p>
+    </div>
   </div>
-  <div class="also"><span>Also included:</span><a href="style-guide.html">Style Guide A</a></div>
+  <div class="insight">A website alone does not create leads. One that is <b>found</b>, <b>measured</b> and built around <b>one clear next step</b> does.</div>
+</section>
+
+<section class="sec" id="plan">
+  <div class="head"><span class="tag"><i>2</i>What we will do</span><h2>Four pieces, working as one system.</h2></div>
+  <div class="pillars">
+    <div class="pillar dark">
+      <div class="k"><span>01</span><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0E1014" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></i></div>
+      <h3>One home for everything</h3>
+      <p>Bring Profit Pulse<sup class="tm">™</sup> and every offer onto your own domain.</p>
+      <ul>
+        <li>francesstrickland.com/profit-pulse and dedicated offer pages</li>
+        <li>Old links redirected, so nothing already shared breaks</li>
+        <li>Every visit from LinkedIn builds your own site's authority</li>
+      </ul>
+    </div>
+    <div class="pillar">
+      <div class="k"><span>02</span><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0E1014" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg></i></div>
+      <h3>A site built to convert</h3>
+      <p>A refreshed design where Profit Pulse<sup class="tm">™</sup> is the front door.</p>
+      <ul>
+        <li>Every page leads to the free five-minute scan</li>
+        <li>A clear path from scan to advisory call to engagement</li>
+        <li>Your booking, scan and newsletter built in, on any device</li>
+      </ul>
+    </div>
+    <div class="pillar">
+      <div class="k"><span>03</span><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0E1014" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></i></div>
+      <h3>Found on Google</h3>
+      <p>Pages written around what your clients search for.</p>
+      <ul>
+        <li>Pages for founder-led growth, structural strain and profitability</li>
+        <li>Technical SEO: speed, structured data, sitemap, clean URLs</li>
+        <li>Google Search Console set up to track rankings and indexing</li>
+      </ul>
+    </div>
+    <div class="pillar">
+      <div class="k"><span>04</span><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0E1014" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></i></div>
+      <h3>Measured end to end</h3>
+      <p>Know which channels bring scans and calls.</p>
+      <ul>
+        <li>Google Analytics 4 with conversion tracking</li>
+        <li>Scan starts, completed scans and booked calls tracked</li>
+        <li>A short monthly report in plain language</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
 <section class="sec">
-  <div class="head"><div><span class="tag"><i>✓</i>One clear path</span><h2>Every page leads to the same first step.</h2></div></div>
-  <div class="path" style="margin-top:0">
-    <div><small>Step 01</small><b>Profit Pulse<sup class="tm">™</sup></b><span>Free · 5 minutes</span></div>
-    <div><small>Step 02</small><b>Profit Pulse Advisory</b><span>No cash · 30 minutes</span></div>
-    <div><small>Step 03</small><b>Performance Clarity Session</b><span>USD/CAD/€ 750</span></div>
-    <div><small>Step 04</small><b>Predictable Performance &amp; Profitability</b><span>Ongoing</span></div>
+  <div class="head"><span class="tag"><i>3</i>What changes for you</span><h2>What you will be able to see and rely on.</h2></div>
+  <div class="outs">
+    <div class="out"><b>Visible in search</b><span>Found by business owners looking for help with the problems you solve.</span></div>
+    <div class="out"><b>One clear next step</b><span>Every visitor is guided to Profit Pulse<sup class="tm">™</sup>, not left to wander.</span></div>
+    <div class="out"><b>One brand, one address</b><span>Your name, your domain, your authority, in one place.</span></div>
+    <div class="out"><b>Decisions on data</b><span>You know what brings leads, so effort goes where it pays.</span></div>
   </div>
 </section>
 
-<footer style="margin-top:72px"><span>Frances Strickland · francesstrickland.com</span><span>November 2026</span></footer>
+<section class="sec">
+  <div class="head"><span class="tag"><i>4</i>How we work</span><h2>Four simple stages.</h2></div>
+  <div class="path">
+    <div><small>Stage 01</small><b>Align</b><span>Choose a design direction and confirm pages and priorities.</span></div>
+    <div><small>Stage 02</small><b>Design</b><span>Refine the chosen direction with your content and feedback.</span></div>
+    <div><small>Stage 03</small><b>Build &amp; migrate</b><span>Build the site, move Profit Pulse<sup class="tm">™</sup> over and set up tracking.</span></div>
+    <div><small>Stage 04</small><b>Launch &amp; measure</b><span>Go live, submit to Google and share the first results.</span></div>
+  </div>
+</section>
+
+<section class="sec" id="designs">
+  <div class="head"><span class="tag"><i>→</i>The designs</span><h2>Three homepage directions to choose from.</h2><p>Built from your current content. Open each one to explore it.</p></div>
+  <div class="cards">
+    <a class="card rec" href="design-b.html">
+      <div class="shot"><img src="assets/previews/design-b.png" alt="Homepage B, modern refresh"></div>
+      <div class="in">
+        <div class="meta">Direction 01 · Modern refresh</div>
+        <h3>Homepage B</h3>
+        <p>A fresh, modern identity with Profit Pulse<sup class="tm">™</sup> leading every section.</p>
+        <div class="go"><span>Open</span><i>→</i></div>
+      </div>
+    </a>
+    <a class="card" href="design-c.html">
+      <div class="shot"><img src="assets/previews/design-c.png" alt="Homepage C, corporate navy"></div>
+      <div class="in">
+        <div class="meta">Direction 02 · Corporate navy</div>
+        <h3>Homepage C</h3>
+        <p>A classic, professional layout in navy and blue.</p>
+        <div class="go"><span>Open</span><i>→</i></div>
+      </div>
+    </a>
+    <a class="card" href="design-a-editorial.html">
+      <div class="shot"><img src="assets/previews/design-a-editorial.png" alt="Homepage A, editorial"></div>
+      <div class="in">
+        <div class="meta">Direction 03 · Your current brand</div>
+        <h3>Homepage A</h3>
+        <p>An editorial take on your existing navy and peach brand.</p>
+        <div class="go"><span>Open</span><i>→</i></div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section class="next">
+  <div>
+    <h2>Next step: pick the direction that feels most like you.</h2>
+    <p>We will then confirm the scope together and agree a timeline.</p>
+  </div>
+  <a class="btn btn-lime" href="#designs">View the designs</a>
+</section>
+
+<footer><span>Prepared for Frances Strickland · francesstrickland.com</span><span>November 2026</span></footer>
 </div>
 </body>
 </html>
