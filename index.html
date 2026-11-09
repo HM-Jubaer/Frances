@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Frances Strickland — Website Redesign Proposal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,700;0,8..60,800;1,8..60,400&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#283A59;--navy-deep:#1A2740;--peach:#F58B6E;--peach-dark:#E2694A;--sage:#D2EBE2;--mist:#A9BDD6;--paper:#FAFAF8;--ivory:#F4F1EC;--ink-light:#5A5A66;--line:rgba(40,58,89,.12);--serif:'Source Serif 4',Georgia,serif;--sans:'PT Sans',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--sans);background:var(--paper);color:#1C1C1A;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+header{background:var(--navy-deep);color:#fff;padding:80px 0 120px;position:relative;overflow:hidden}
+header::before{content:"";position:absolute;inset:0;background:radial-gradient(700px 400px at 85% 20%,rgba(245,139,110,.18),transparent 60%)}
+header .wrap{position:relative}
+.k{color:var(--peach);font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase}
+h1{font-family:var(--serif);font-weight:800;font-size:clamp(36px,5vw,58px);line-height:1.1;margin:16px 0 18px}
+h1 em{color:var(--peach);font-weight:400}
+header p{color:var(--sage);max-width:640px;font-size:18px}
+.pl{margin-top:36px;width:100%;max-width:520px;height:40px}
+.pl path{stroke-dasharray:700;stroke-dashoffset:700;animation:d 2.6s ease-out forwards}
+@keyframes d{to{stroke-dashoffset:0}}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:-72px;position:relative}
+@media(max-width:900px){.cards{grid-template-columns:1fr}}
+.card{background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 20px 50px rgba(26,39,64,.12);display:flex;flex-direction:column;transition:.3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 30px 70px rgba(26,39,64,.18)}
+.thumb{height:170px;position:relative;display:grid;place-items:center}
+.t1{background:var(--ivory)}.t2{background:linear-gradient(135deg,#FEEBE9,#FAFAF8)}.t3{background:var(--navy-deep)}
+.thumb .n{position:absolute;left:20px;top:16px;font-family:var(--serif);font-weight:800;font-size:15px;color:var(--peach-dark)}
+.t3 .n{color:var(--peach)}
+.in{padding:26px;flex:1;display:flex;flex-direction:column}
+.in h2{font-family:var(--serif);color:var(--navy);font-size:24px;line-height:1.2;margin-bottom:8px}
+.in p{color:var(--ink-light);font-size:15.5px;flex:1}
+.go{margin-top:18px;font-weight:700;color:var(--navy);display:inline-flex;gap:8px;align-items:center}
+.go span{width:30px;height:30px;border-radius:50%;background:var(--peach);display:grid;place-items:center;color:var(--navy-deep);transition:.25s}
+.card:hover .go span{transform:translateX(4px)}
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--peach-dark);margin-bottom:8px}
+section{padding:80px 0}
+h3{font-family:var(--serif);color:var(--navy);font-size:30px;margin-bottom:22px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media(max-width:800px){.grid2{grid-template-columns:1fr}}
+.box{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px}
+.box h4{font-family:var(--serif);color:var(--navy);font-size:19px;margin-bottom:12px}
+.box ul{list-style:none}
+.box li{padding:7px 0 7px 24px;position:relative;color:#3A3A4A;font-size:15.5px;border-bottom:1px dashed var(--line)}
+.box li:last-child{border:0}
+.box li::before{content:"→";position:absolute;left:0;color:var(--peach-dark);font-weight:700}
+.refs{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+@media(max-width:900px){.refs{grid-template-columns:repeat(2,1fr)}}
+.ref{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;font-size:14px;transition:.2s}
+.ref:hover{border-color:var(--peach)}
+.ref b{display:block;color:var(--navy);margin-bottom:4px}
+.ref span{color:var(--ink-light);font-size:13px;line-height:1.4;display:block}
+footer{border-top:1px solid var(--line);padding:30px 0;font-size:14px;color:var(--ink-light)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <span class="k">Website Redesign Proposal · November 2026</span>
+    <h1>Frances Strickland <em>— with Profit Pulse™ at the centre.</em></h1>
+    <p>A style guide based on francesstrickland.com and two homepage directions. Both are built around one idea: make the free Profit Pulse™ the front door to the whole business.</p>
+    <svg class="pl" viewBox="0 0 520 40" preserveAspectRatio="none"><path d="M0 20h200l10-14 12 28 10-20 8 6h280" fill="none" stroke="#F58B6E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="cards">
+    <a class="card" href="style-guide.html">
+      <div class="thumb t1"><span class="n">00</span>
+        <svg width="200" height="70" viewBox="0 0 200 70"><rect x="0" y="10" width="36" height="50" rx="8" fill="#283A59"/><rect x="42" y="10" width="36" height="50" rx="8" fill="#1A2740"/><rect x="84" y="10" width="36" height="50" rx="8" fill="#F58B6E"/><rect x="126" y="10" width="36" height="50" rx="8" fill="#D2EBE2"/><rect x="168" y="10" width="32" height="50" rx="8" fill="#FEEBE9"/></svg>
+      </div>
+      <div class="in"><span class="tag">Foundation</span><h2>Style Guide</h2><p>Colour, typography, buttons, components, the Profit Pulse™ visual system, imagery, layout and voice, all based on her current brand.</p><span class="go">Open guide <span>→</span></span></div>
+    </a>
+    <a class="card" href="design-a-editorial.html">
+      <div class="thumb t2"><span class="n">A</span>
+        <svg width="210" height="110" viewBox="0 0 210 110"><rect x="0" y="22" width="90" height="10" rx="3" fill="#283A59"/><rect x="0" y="38" width="76" height="10" rx="3" fill="#283A59"/><rect x="0" y="54" width="84" height="10" rx="3" fill="#E2694A"/><rect x="0" y="78" width="54" height="16" rx="8" fill="#F58B6E"/><path d="M120 10c40-8 78 14 82 50s-30 52-62 46-46-30-42-56 4-36 22-40z" fill="#283A59"/><rect x="104" y="20" width="56" height="22" rx="6" fill="#fff" stroke="#eee"/><path d="M108 31h14l3-6 4 12 3-8 2 2h22" fill="none" stroke="#F58B6E" stroke-width="1.6"/></svg>
+      </div>
+      <div class="in"><span class="tag">Direction A · Light</span><h2>Editorial Signal</h2><p>Calm, premium and editorial. A portrait framed by floating Profit Pulse™ cards, an interactive sample risk profile, and a 4-step offer ladder.</p><span class="go">View design <span>→</span></span></div>
+    </a>
+    <a class="card" href="design-b-command.html">
+      <div class="thumb t3"><span class="n">B</span>
+        <svg width="210" height="110" viewBox="0 0 210 110"><rect x="0" y="24" width="86" height="10" rx="3" fill="#fff"/><rect x="0" y="40" width="70" height="10" rx="3" fill="#fff"/><rect x="0" y="56" width="80" height="10" rx="3" fill="#F58B6E"/><rect x="0" y="80" width="54" height="16" rx="8" fill="#F58B6E"/><rect x="104" y="6" width="104" height="98" rx="14" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.18)"/><path d="M122 78a34 34 0 0 1 68 0" fill="none" stroke="#E3A543" stroke-width="9"/><path d="M122 78a34 34 0 0 1 10-24" fill="none" stroke="#3E8E7E" stroke-width="9"/><path d="M180 54a34 34 0 0 1 10 24" fill="none" stroke="#CB2026" stroke-width="9"/><path d="M156 78l14-24" stroke="#fff" stroke-width="3" stroke-linecap="round"/><circle cx="156" cy="78" r="4" fill="#F58B6E"/></svg>
+      </div>
+      <div class="in"><span class="tag">Direction B · Dark</span><h2>Navy Command</h2><p>Bold and interactive. A live risk gauge in the hero, a "How it works" process, a pricing-tier ladder with Profit Pulse™ as "Start here", and offer tabs.</p><span class="go">View design <span>→</span></span></div>
+    </a>
+  </div>
+
+  <section>
+    <h3>The strategy</h3>
+    <div class="grid2">
+      <div class="box"><h4>What we found on the current site</h4><ul>
+        <li>Profit Pulse™, the main lead magnet, is one of six competing offer cards</li>
+        <li>The brand is split across 5 domains (four *.netlify.app microsites)</li>
+        <li>The scan runs on a Google Form: a weak experience, and the data is siloed</li>
+        <li>3 of 4 Substack essay links point to the homepage, not the essays</li>
+        <li>The 720px text column reads like a document, with a single 480px photo</li>
+      </ul></div>
+      <div class="box"><h4>What the redesign does</h4><ul>
+        <li>Makes Profit Pulse™ the primary action, in 6–8 placements per page</li>
+        <li>Shows a clear path: Free scan → Free advisory → $750 session → Ongoing</li>
+        <li>Brings all offers onto francesstrickland.com</li>
+        <li>Builds the scan natively, with results going to her inbox and CRM</li>
+        <li>Gives the brand a wider, more editorial layout with her real proof up front</li>
+      </ul></div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <h3>Design references used</h3>
+    <div class="refs">
+      <a class="ref" href="Reference%20design/Design%201%20(hero%20only).jpg"><b>Design 1</b><span>Floating data cards around the portrait, trust row</span></a>
+      <a class="ref" href="Reference%20design/Design%202.jpg"><b>Design 2 · Brevon</b><span>Navy hero, stat chips, pricing tiers</span></a>
+      <a class="ref" href="Reference%20design/Reference%201.png"><b>Reference 1 · Avantage</b><span>Blob image masks, hatched circles, newsletter</span></a>
+      <a class="ref" href="Reference%20design/Reference%202.png"><b>Reference 2 · Nifty</b><span>Editorial serif, numbered columns, closing statement</span></a>
+      <a class="ref" href="Reference%20design/Preference%201.pdf"><b>Preference 1 · Consulter</b><span>CTA strip, 4-step process, experience badge</span></a>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span>Prepared for Frances Strickland · francesstrickland.com</span><span>Concept mockups. All copy is taken from her current site.</span></div></footer>
+</body>
+</html>
