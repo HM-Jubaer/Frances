@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Style Guide B — The Operating Report</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,300..900;1,62..125,300..900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#EEEBE3;--paper-2:#E4E0D5;--ink:#161513;--ink-2:#3D3A34;--ink-3:#6E6A61;--rule:#C9C3B6;
+  --signal:#D2401C;--signal-deep:#A93113;
+  --s1:#D9D4C8;--s2:#A9A294;--s3:#5F5B53;
+  --sans:'Archivo',Arial,sans-serif;--serif:'Newsreader',Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--sans);font-size:17px;line-height:1.6;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+@media(max-width:600px){.wrap{padding:0 20px}}
+.cond{font-stretch:75%}
+header{border-bottom:2px solid var(--ink);padding:40px 0 28px}
+header .meta{display:flex;justify-content:space-between;font-size:13px;color:var(--ink-3);flex-wrap:wrap;gap:8px}
+header h1{font-stretch:75%;font-weight:800;font-size:clamp(56px,9vw,132px);line-height:.9;letter-spacing:-.02em;margin:28px 0 18px}
+header p{max-width:640px;color:var(--ink-2);font-size:19px}
+.row{display:grid;grid-template-columns:3fr 9fr;gap:32px;padding:56px 0;border-bottom:1px solid var(--rule)}
+@media(max-width:860px){.row{grid-template-columns:1fr;gap:20px}}
+.lab{font-size:13px;font-weight:600;color:var(--ink-3)}
+.lab b{display:block;font-stretch:75%;font-weight:800;font-size:30px;color:var(--ink);line-height:1;margin-bottom:6px}
+h2{font-stretch:75%;font-weight:800;font-size:40px;line-height:1;letter-spacing:-.01em;margin-bottom:14px}
+p.note{color:var(--ink-2);max-width:680px;margin-bottom:24px}
+.sw{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink);border-left:1px solid var(--ink)}
+@media(max-width:700px){.sw{grid-template-columns:1fr 1fr}}
+.sw>div{border-right:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.sw .c{border-bottom:1px solid var(--ink)}
+.sw .c{height:120px}
+.sw .t{padding:12px 14px;font-size:13px;color:var(--ink-3)}
+.sw .t b{display:block;color:var(--ink);font-size:15px}
+.type td{padding:20px 0;border-bottom:1px solid var(--rule);vertical-align:baseline}
+.type td:first-child{width:220px;font-size:13px;color:var(--ink-3);padding-right:20px}
+.type td:first-child b{display:block;color:var(--ink);font-size:14px}
+table{width:100%;border-collapse:collapse}
+@media(max-width:700px){.type td{display:block;width:auto!important;padding:8px 0}.type td:first-child{border:0;padding-top:20px}}
+.btn{display:inline-block;font-family:var(--sans);font-weight:700;font-size:16px;padding:16px 24px;border:2px solid var(--ink);text-decoration:none;color:var(--ink);transition:background .15s,color .15s}
+.btn-signal{background:var(--signal);border-color:var(--signal);color:var(--ink)}
+.btn-signal:hover{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.btn-ink{background:var(--ink);color:var(--paper)}
+.btn-ink:hover{background:var(--signal);border-color:var(--signal);color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--paper)}
+.tlink{font-weight:700;color:var(--ink);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px;text-decoration-color:var(--signal)}
+.bx{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.scale{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--ink)}
+.scale div{padding:14px;font-size:14px;font-weight:600;border-right:1px solid var(--ink);min-height:84px;display:flex;flex-direction:column;justify-content:space-between}
+.scale div:last-child{border:0}
+.scale small{font-size:12px;font-weight:400}
+@media(max-width:700px){.scale{grid-template-columns:1fr 1fr}.scale div:nth-child(2){border-right:0}.scale div:nth-child(-n+2){border-bottom:1px solid var(--ink)}}
+.panel{background:var(--signal);padding:28px;max-width:420px}
+.panel b{font-stretch:75%;font-weight:800;font-size:34px;line-height:1;display:block}
+.panel table td{padding:9px 0;border-top:1px solid rgba(22,21,19,.35);font-size:14px}
+.panel table td:first-child{font-weight:700;width:110px}
+.trow{display:grid;grid-template-columns:140px 1fr 140px;gap:20px;padding:18px 0;border-top:1px solid var(--rule);align-items:baseline}
+.trow:last-child{border-bottom:1px solid var(--rule)}
+.trow b{font-stretch:75%;font-weight:800;font-size:22px}
+.trow span{color:var(--ink-3);font-size:14px}
+@media(max-width:700px){.trow{grid-template-columns:1fr}}
+.chk{display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-top:1px solid var(--rule)}
+.box{width:22px;height:22px;border:2px solid var(--ink);flex:none;margin-top:3px;display:grid;place-items:center}
+.box.on{background:var(--ink)}
+.box.on::after{content:"";width:8px;height:8px;background:var(--signal)}
+.quote{font-family:var(--serif);font-style:italic;font-size:28px;line-height:1.35;max-width:720px}
+.who{font-size:13px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;color:var(--ink-3);margin-top:12px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+@media(max-width:700px){.grid2{grid-template-columns:1fr}}
+.list{list-style:none}
+.list li{padding:12px 0;border-top:1px solid var(--rule);font-size:15.5px}
+.list li b{display:block}
+.no li::before{content:"×";color:var(--signal);font-weight:800;margin-right:10px}
+.yes li::before{content:"+";font-weight:800;margin-right:10px}
+.photo{filter:grayscale(1) contrast(1.08);width:100%;max-width:320px;aspect-ratio:4/5;object-fit:cover;display:block}
+figcaption{font-size:13px;color:var(--ink-3);margin-top:8px;border-top:1px solid var(--ink);padding-top:8px;max-width:320px}
+.gridviz{display:grid;grid-template-columns:repeat(12,1fr);gap:12px;height:90px}
+.gridviz div{background:rgba(210,64,28,.12);border-left:1px solid rgba(210,64,28,.4);border-right:1px solid rgba(210,64,28,.4)}
+footer{padding:40px 0;font-size:13px;color:var(--ink-3)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="meta"><span>Style Guide B · Design direction "The Operating Report"</span><span>Frances Strickland · November 2026</span></div>
+  <h1>The Operating<br>Report.</h1>
+  <p>A new visual identity for Frances, separate from her current site. It is modelled on the documents she spent 30 years reading inside Bosch, Cummins and Eaton: annual reports, engineering drawings and operating reviews. It is precise and printed, and it does not try to charm.</p>
+</header>
+
+<section class="row">
+  <div class="lab"><b>01</b>Concept</div>
+  <div>
+    <h2>Diagnosis looks like a document.</h2>
+    <p class="note">Her work is reading systems. So the site reads like one: a strict grid, hairline rules, tables instead of cards, and one signal colour that means one thing. Profit Pulse™ is that signal.</p>
+    <div class="grid2">
+      <ul class="list yes"><li><b>Ruled, not boxed</b>Content sits on hairlines, the way a report does.</li><li><b>Left-aligned and asymmetric</b>A 3/9 column split, with the section number in the margin.</li><li><b>Signal colour is rationed</b>Vermilion only appears on Profit Pulse™.</li></ul>
+      <ul class="list yes"><li><b>Real information as the visual</b>Tables, scales and checklists rather than decoration.</li><li><b>Monochrome photography</b>It flatters the low-res portrait and suits the print feel.</li><li><b>Square corners everywhere</b>Zero border radius.</li></ul>
+    </div>
+  </div>
+</section>
+
+<section class="row">
+  <div class="lab"><b>02</b>Colour</div>
+  <div>
+    <h2>Paper, ink and one signal.</h2>
+    <p class="note">This deliberately drops the navy and peach. Use roughly 80% paper, 18% ink and 2% signal. If vermilion appears on something that is not Profit Pulse™, it is wrong.</p>
+    <div class="sw">
+      <div><div class="c" style="background:#EEEBE3"></div><div class="t"><b>Paper</b>#EEEBE3 · page</div></div>
+      <div><div class="c" style="background:#E4E0D5"></div><div class="t"><b>Paper 2</b>#E4E0D5 · alt band</div></div>
+      <div><div class="c" style="background:#161513"></div><div class="t"><b>Ink</b>#161513 · text, dark bands</div></div>
+      <div><div class="c" style="background:#D2401C"></div><div class="t"><b>Signal</b>#D2401C · Profit Pulse™ only</div></div>
+      <div><div class="c" style="background:#3D3A34"></div><div class="t"><b>Ink 2</b>#3D3A34 · body copy</div></div>
+      <div><div class="c" style="background:#6E6A61"></div><div class="t"><b>Ink 3</b>#6E6A61 · captions, meta</div></div>
+      <div><div class="c" style="background:#C9C3B6"></div><div class="t"><b>Rule</b>#C9C3B6 · hairlines</div></div>
+      <div><div class="c" style="background:#A93113"></div><div class="t"><b>Signal deep</b>#A93113 · signal text on paper</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="row">
+  <div class="lab"><b>03</b>Typography</div>
+  <div>
+    <h2>Archivo, with Newsreader for voices.</h2>
+    <p class="note"><b>Archivo</b> is an industrial grotesque with a width axis. It runs condensed and heavy for headlines and at normal width for reading. <b>Newsreader</b> is used only when a person is speaking: testimonials and pull quotes. These replace Source Serif and PT Sans completely.</p>
+    <table class="type">
+      <tr><td><b>Display</b>Archivo · wdth 75 · 800 · 72–128px · lh .92 · −0.02em</td><td><span class="cond" style="font-weight:800;font-size:clamp(44px,6vw,84px);line-height:.92;letter-spacing:-.02em;display:block">Revenue is there. The profit is somewhere else.</span></td></tr>
+      <tr><td><b>H2</b>Archivo · wdth 75 · 800 · 44–56px · lh 1</td><td><span class="cond" style="font-weight:800;font-size:48px;line-height:1">Businesses are compensating.</span></td></tr>
+      <tr><td><b>H3</b>Archivo · wdth 100 · 700 · 22px</td><td><span style="font-weight:700;font-size:22px">Performance Clarity Session</span></td></tr>
+      <tr><td><b>Body</b>Archivo · 400 · 17–18px · lh 1.6</td><td><span style="color:var(--ink-2);display:block;max-width:600px">Frances works where strategy, execution, and financial performance meet. She starts with how decisions actually move.</span></td></tr>
+      <tr><td><b>Meta</b>Archivo · 600 · 13px · ink 3</td><td><span style="font-size:13px;font-weight:600;color:var(--ink-3)">Crissier, Switzerland · 30+ years · 3 continents</span></td></tr>
+      <tr><td><b>Voice</b>Newsreader · italic · 26–32px</td><td><span class="quote" style="display:block">"You will not leave a conversation with Fran wondering what to do next. You will leave knowing."</span></td></tr>
+      <tr><td><b>Figures</b>Archivo · wdth 62 · 800 · 96px</td><td><span style="font-stretch:62%;font-weight:800;font-size:96px;line-height:.9">30+</span></td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="row">
+  <div class="lab"><b>04</b>Grid &amp; rules</div>
+  <div>
+    <h2>Twelve columns. Margin notes.</h2>
+    <p class="note">The container is 1240px with a 12-column grid and a 32px gutter. Every section uses a 3/9 split, with the section number and label in the 3-column margin. Sections are separated by a 1px rule line, and the most important ones by a 2px ink line.</p>
+    <div class="gridviz"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    <p class="note" style="margin-top:16px">Vertical rhythm: 8, 16, 24, 32, 56, 96, 144. Section padding is 96px on desktop and 64px on mobile.</p>
+  </div>
+</section>
+
+<section class="row">
+  <div class="lab"><b>05</b>Actions</div>
+  <div>
+    <h2>Rectangles, plainly labelled.</h2>
+    <p class="note">Buttons have no pills, no arrow circles and no lift on hover. The label says what happens.</p>
+    <div class="bx" style="margin-bottom:20px"><a class="btn btn-signal" href="#">Begin the Profit Pulse™</a><a class="btn btn-ink" href="#">Book a conversation</a><a class="btn btn-line" href="#">Read the essay</a><a class="tlink" href="#">See all engagements</a></div>
+  </div>
+</section>
+
+<section class="row">
+  <div class="lab"><b>06</b>Profit Pulse™</div>
+  <div>
+    <h2>The only coloured object on the page.</h2>
+    <p class="note">The scan is shown as a specification sheet: what it reads, what it returns and what it costs. Its four outcomes run from light to signal, rather than traffic-light colours.</p>
+    <div class="grid2">
+      <div class="panel"><b>Profit Pulse™</b><p style="font-size:14px;margin:8px 0 14px">Five-minute business risk scan.</p><table><tr><td>Reads</td><td>Structure, Leadership, Flow</td></tr><tr><td>Returns</td><td>Risk profile and one focus area</td></tr><tr><td>Costs</td><td>Nothing</td></tr></table></div>
+      <div>
+        <div class="scale">
+          <div style="background:var(--s1)">Strong Position<small>Level 1</small></div>
+          <div style="background:var(--s2)">Hidden Risk Signals Present<small>Level 2</small></div>
+          <div style="background:var(--s3);color:var(--paper)">Elevated Risk<small>Level 3</small></div>
+          <div style="background:var(--signal)">Critical Attention Required<small>Level 4</small></div>
+        </div>
+        <div style="margin-top:22px">
+          <div class="chk"><span class="box on"></span><span>Self-check row, checked state</span></div>
+          <div class="chk"><span class="box"></span><span>Self-check row, empty state</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="row">
+  <div class="lab"><b>07</b>Lists &amp; voices</div>
+  <div>
+    <h2>Tables carry the offers.</h2>
+    <div class="trow"><b>Profit Pulse™</b><span>Five-minute scan. Risk profile by email.</span><span>Free</span></div>
+    <div class="trow"><b>Clarity Session</b><span>One working session, one question.</span><span>USD/CAD/€ 750</span></div>
+    <div style="margin-top:40px"><p class="quote">"Each session led to concrete decisions and tangible progress."</p><p class="who">Adrien Auger · Swiss Office Manager</p></div>
+  </div>
+</section>
+
+<section class="row">
+  <div class="lab"><b>08</b>Photography</div>
+  <div class="grid2">
+    <figure><img class="photo" src="assets/frances.jpg" alt="Frances Strickland"><figcaption>Fig. 1: Frances Strickland, Crissier. Grayscale, slight contrast boost, captioned like a report figure.</figcaption></figure>
+    <div><h2>Monochrome, captioned.</h2><p class="note">Every image is grayscale with a figure caption. It hides the low resolution of the current portrait and stays consistent once the new shoot arrives. Brief for the shoot: working environments, hands on documents, whiteboards and plant floors, with no posed handshakes and no smiling at laptops.</p></div>
+  </div>
+</section>
+
+<section class="row" style="border-bottom:2px solid var(--ink)">
+  <div class="lab"><b>09</b>What we avoid</div>
+  <div>
+    <h2>The template tells.</h2>
+    <p class="note">These patterns make a site look generated, or look like the template it came from. None of them appear in Design B.</p>
+    <div class="grid2">
+      <ul class="list no"><li>Tiny uppercase eyebrow labels with sparkles over every heading</li><li>Centred heading-and-subtitle stacks for every section</li><li>Pill buttons with an arrow in a circle</li><li>Floating stat "chips" around a portrait</li><li>Gradient glows, glass panels, grid-paper backgrounds</li><li>A 3×2 grid of icon-in-rounded-square cards</li></ul>
+      <ul class="list no"><li>Cards that lift on hover</li><li>Coloured italic words inside headlines</li><li>Pricing tiers with a "Most popular" ribbon</li><li>Logo marquees and testimonial carousels with stars</li><li>Decorative dashboards and gauges with fake data</li><li>Blob shapes, hatched circles, morphing masks</li></ul>
+    </div>
+  </div>
+</section>
+<footer>Style Guide B for Design B. Kept separate from Style Guide A, which follows the current francesstrickland.com.</footer>
+</div>
+</body>
+</html>
